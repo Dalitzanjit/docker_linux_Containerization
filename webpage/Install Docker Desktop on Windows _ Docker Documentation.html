@@ -1,0 +1,431 @@
+<!-- Page generated 2021-03-22 18:53:17 +0000-->
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WL2QLG5');</script>
+<title>Install Docker Desktop on Windows | Docker Documentation</title>
+  <meta name="description" content="How to install Docker Desktop for Windows" />
+  <meta name="keywords" content="windows, install, download, run, docker, local">
+  <link rel="canonical" href="https://docs.docker.com/docker-for-windows/install/" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicons/docs@2x.ico" sizes="129x128">
+  <link rel="apple-touch-icon" type="image/x-icon" href="/favicons/docs@2x.ico" sizes="129x128">
+  <meta name="msapplication-TileImage" content="/favicons/docs@2x.ico">
+  <meta property="og:image" content="/favicons/docs@2x.ico"/>
+  <meta name="theme-color" content="#2496ed" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><script defer src="/js/theme-switcher.js"></script>
+  <script defer src="/js/anchorlinks.js"></script>
+  <script defer src="/js/jquery.js"></script>
+  <script defer src="/js/bootstrap.min.js"></script>
+  <script defer src="/js/docs.js"></script><script defer src="/js/search.js"></script><link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/geomanist/hinted-Geomanist-Book.woff2"    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/geomanist/hinted-Geomanist-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/glyphicons-halflings-regular.woff2"       type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/fontawesome-webfont.woff2?v=4.7.0"        type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css" id="pagestyle">
+
+  <!-- SEO stuff -->
+  <meta name="twitter:title" itemprop="title name" content="Install Docker Desktop on Windows"/>
+  <meta name="twitter:description" property="og:description" itemprop="description" content="" />
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:domain" content="docs.docker.com"/>
+  <meta name="twitter:site" content="@docker_docs"/>
+  <meta name="twitter:url" content="https://twitter.com/docker_docs"/>
+  <meta name="twitter:image:src" content="https://docs.docker.com/images/docs@2x.png"/>
+  <meta name="twitter:image:alt" content="Docker Documentation"/>
+  <meta property="og:title" content="Install Docker Desktop on Windows" />
+  <meta property="og:description" content="How to install Docker Desktop for Windows" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:updated_time" itemprop="dateUpdated" content="2021-03-22T18:53:17+00:00"/>
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="https://docs.docker.com/images/docs@2x.png"/>
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://docs.docker.com/docker-for-windows/install/" />
+  <meta property="og:site_name" content="Docker Documentation" />
+  <meta property="article:published_time" itemprop="datePublished" content="2021-03-22T18:53:17+00:00"/>
+  <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebPage","headline":"Install Docker Desktop on Windows","description":"How to install Docker Desktop for Windows","url":"https://docs.docker.com/docker-for-windows/install/"}</script>
+  <!-- END SEO STUFF -->
+</head>
+<body class="colums">
+    <header>
+        <nav class="nav-secondary navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/">
+                <img class="logo" src="/images/docker-docs-logo.svg" alt="Docker Docs" title="Docker Docs" width="160" height="28" />
+            </a>
+        </div>
+        <div class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <div class="logo-mobile">
+    <a href="/">
+        <img src="/images/docker-icon.svg" alt="Docker Docs" title="Docker Docs" width="30" height="30" />
+    </a>
+</div>
+<div class="search-form" id="search-div">
+    <form class="search-form form-inline" id="searchForm" action="/search/" method="get">
+        <label for="st-search-input" class="sr-only">Search</label>
+        <input class="search-field form-control ds-input" id="st-search-input" name="q" placeholder="Search the docs" type="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;">
+        <div id="autocompleteResults"></div>
+        <!-- <button type="submit" class="search-submit btn btn-default">Search</button> -->
+    </form>
+</div>
+<div class="sidebar-toggle">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="nav-container hidden-sm hidden-xs">
+    <div id="tabs">
+        <ul class="tabs jsTOCHorizontal"><li><a href="/" id="home">Home</a></li><li><a href="/get-started/overview/" id="guides">Guides</a></li><li><a href="/engine/" id="manuals">Product manuals</a></li><li><a href="/reference/" id="reference">Reference</a></li><li><a href="/samples/" id="samples">Samples</a></li></ul>
+    </div>
+    <div class="ctrl-right">
+        <a href="javascript:void(0)" id="menu-toggle" aria-label="Current page's menu toggle"><i class="fa fa-indent" aria-hidden="true"></i></a>
+    </div>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+    </header>
+    <div class="wrapper right-open">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-body">
+                    <main class="col-content content">
+                        <section class="section"><h1>Install Docker Desktop on Windows</h1><p><em class="reading-time">Estimated reading time: 6 minutes</em></p><p>Docker Desktop for Windows is the <a href="https://www.docker.com/community-edition">Community</a> version of Docker for Microsoft Windows.
+You can download Docker Desktop for Windows from Docker Hub.</p>
+
+<p><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows/" class="button outline-btn">Download from Docker
+Hub</a></p>
+
+<p>By downloading Docker Desktop, you agree to the terms of the <a href="https://www.docker.com/legal/docker-software-end-user-license-agreement" target="_blank" rel="noopener" class="_">Docker Software End User License Agreement</a> and the <a href="https://www.docker.com/legal/data-processing-agreement" target="_blank" rel="noopener" class="_">Docker Data Processing Agreement</a>.</p>
+
+<h2 id="system-requirements">System requirements</h2>
+
+<p>Your Windows machine must meet the following requirements to successfully install Docker Desktop.</p>
+
+<h3 id="hyper-v-backend-and-windows-containers">Hyper-V backend and Windows containers</h3>
+
+<ul>
+  <li>
+    <p>Windows 10 64-bit: Pro, Enterprise, or Education (Build 17134 or higher).</p>
+
+    <p>For Windows 10 Home, see <a href="#system-requirements-for-wsl-2-backend">System requirements for WSL 2 backend</a>.</p>
+  </li>
+  <li>Hyper-V and Containers Windows features must be enabled.</li>
+  <li>
+    <p>The following hardware prerequisites are required to successfully run Client
+Hyper-V on Windows 10:</p>
+
+    <ul>
+      <li>64 bit processor with <a href="https://en.wikipedia.org/wiki/Second_Level_Address_Translation" target="_blank" rel="noopener" class="_">Second Level Address Translation (SLAT)</a></li>
+      <li>4GB system RAM</li>
+      <li>BIOS-level hardware virtualization support must be enabled in the
+BIOS settings.  For more information, see
+<a href="/docker-for-windows/troubleshoot/#virtualization-must-be-enabled">Virtualization</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="wsl-2-backend">WSL 2 backend</h3>
+
+<ul>
+  <li>Windows 10 64-bit: Home, Pro, Enterprise, or Education, version 1903 (Build 18362 or higher).</li>
+  <li>Enable the WSL 2 feature on Windows. For detailed instructions, refer to the
+  <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noopener" class="_">Microsoft documentation</a>.</li>
+  <li>
+    <p>The following hardware prerequisites are required to successfully run
+WSL 2 on Windows 10:</p>
+
+    <ul>
+      <li>64-bit processor with <a href="https://en.wikipedia.org/wiki/Second_Level_Address_Translation" target="_blank" rel="noopener" class="_">Second Level Address Translation (SLAT)</a></li>
+      <li>4GB system RAM</li>
+      <li>BIOS-level hardware virtualization support must be enabled in the
+BIOS settings.  For more information, see
+<a href="/docker-for-windows/troubleshoot/#virtualization-must-be-enabled">Virtualization</a>.</li>
+    </ul>
+  </li>
+  <li>Download and install the <a href="https://docs.microsoft.com/windows/wsl/wsl2-kernel" target="_blank" rel="noopener" class="_">Linux kernel update package</a>.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Note</strong></p>
+
+  <p>Docker supports Docker Desktop on Windows for those versions of Windows 10 that are still within <a href="https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet" target="_blank" rel="noopener" class="_">Microsoft’s servicing timeline</a>.</p>
+</blockquote>
+
+<h3 id="whats-included-in-the-installer">What’s included in the installer</h3>
+
+<p>The Docker Desktop installation includes <a href="/engine/">Docker Engine</a>,
+Docker CLI client, <a href="/compose/">Docker Compose</a>,
+<a href="/notary/getting_started/">Notary</a>,
+<a href="https://github.com/kubernetes/kubernetes/">Kubernetes</a>,
+and <a href="https://github.com/docker/docker-credential-helpers/">Credential Helper</a>.</p>
+
+<p>Containers and images created with Docker Desktop are shared between all
+user accounts on machines where it is installed. This is because all Windows
+accounts use the same VM to build and run containers. Note that it is not possible to share containers and images between user accounts when using the Docker Desktop WSL 2 backend.</p>
+
+<p>Nested virtualization scenarios, such as running Docker Desktop on a
+VMWare or Parallels instance might work, but there are no guarantees. For
+more information, see <a href="/docker-for-windows/troubleshoot/#running-docker-desktop-for-windows-in-nested-virtualization-scenarios">Running Docker Desktop in nested virtualization scenarios</a>.</p>
+
+<h3 id="about-windows-containers">About Windows containers</h3>
+
+<p>Looking for information on using Windows containers?</p>
+
+<ul>
+  <li><a href="/docker-for-windows/#switch-between-windows-and-linux-containers">Switch between Windows and Linux containers</a>
+describes how you can toggle between Linux and Windows containers in Docker Desktop and points you to the tutorial mentioned above.</li>
+  <li><a href="https://github.com/docker/labs/blob/master/windows/windows-containers/README.md">Getting Started with Windows Containers (Lab)</a>
+provides a tutorial on how to set up and run Windows containers on Windows 10, Windows Server 2016 and Windows Server 2019. It shows you how to use a MusicStore application
+with Windows containers.</li>
+  <li>Docker Container Platform for Windows <a href="https://www.docker.com/microsoft/">articles and blog
+posts</a> on the Docker website.</li>
+</ul>
+
+<h2 id="install-docker-desktop-on-windows">Install Docker Desktop on Windows</h2>
+
+<ol>
+  <li>
+    <p>Double-click <strong>Docker Desktop Installer.exe</strong> to run the installer.</p>
+
+    <p>If you haven’t already downloaded the installer (<code class="highlighter-rouge">Docker Desktop Installer.exe</code>), you can get it from
+ <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows/"><strong>Docker Hub</strong></a>.
+ It typically downloads to your <code class="highlighter-rouge">Downloads</code> folder, or you can run it from
+ the recent downloads bar at the bottom of your web browser.</p>
+  </li>
+  <li>
+    <p>When prompted, ensure the <strong>Enable Hyper-V Windows Features</strong> or the <strong>Install required Windows components for WSL 2</strong> option is selected on the Configuration page.</p>
+  </li>
+  <li>
+    <p>Follow the instructions on the installation wizard to authorize the installer and proceed with the install.</p>
+  </li>
+  <li>
+    <p>When the installation is successful, click <strong>Close</strong> to complete the installation process.</p>
+  </li>
+  <li>
+    <p>If your admin account is different to your user account, you must add the user to the <strong>docker-users</strong> group. Run <strong>Computer Management</strong> as an administrator and navigate to <strong>Local Users and Groups</strong> &gt; <strong>Groups</strong> &gt; <strong>docker-users</strong>. Right-click to add the user to the group.
+Log out and log back in for the changes to take effect.</p>
+  </li>
+</ol>
+
+<h2 id="start-docker-desktop">Start Docker Desktop</h2>
+
+<p>Docker Desktop does not start automatically after installation. To start Docker Desktop, search for Docker, and select <strong>Docker Desktop</strong> in the search results.</p>
+
+<p><img src="/docker-for-windows/images/docker-app-search.png" alt="search for Docker app" width="300px" /></p>
+
+<p>When the whale icon in the status bar stays steady, Docker Desktop is up-and-running, and is accessible from any terminal window.</p>
+
+<p><img src="/docker-for-windows/images/whale-icon-systray.png" alt="whale on taskbar" /></p>
+
+<p>If the whale icon is hidden in the Notifications area, click the up arrow on the
+taskbar to show it. To learn more, see <a href="/docker-for-windows/#docker-settings-dialog">Docker Settings</a>.</p>
+
+<p>When the initialization is complete, Docker Desktop launches the onboarding tutorial. The tutorial includes a simple exercise to build an example Docker image, run it as a container, push and save the image to Docker Hub.</p>
+
+<p><img src="/docker-for-windows/images/docker-tutorial-win.png" alt="Docker Quick Start tutorial" width="450px" /></p>
+
+<p>Congratulations! You are now successfully running Docker Desktop on Windows.</p>
+
+<p>If you would like to rerun the tutorial, go to the Docker Desktop menu and select <strong>Learn</strong>.</p>
+
+<h2 id="automatic-updates">Automatic updates</h2>
+
+<p>Starting with Docker Desktop 3.0.0, updates to Docker Desktop will be available automatically as delta updates from the previous version.</p>
+
+<p>When an update is available, Docker Desktop automatically downloads it to your machine and displays an icon to indicate the availability of a newer version. All you need to do now is to click <strong>Update and restart</strong> from the Docker menu. This installs the latest update and restarts Docker Desktop for the changes to take effect.</p>
+
+<h2 id="uninstall-docker-desktop">Uninstall Docker Desktop</h2>
+
+<p>To uninstall Docker Desktop from your Windows machine:</p>
+
+<ol>
+  <li>From the Windows <strong>Start</strong> menu, select <strong>Settings</strong> &gt; <strong>Apps</strong> &gt; <strong>Apps &amp; features</strong>.</li>
+  <li>Select <strong>Docker Desktop</strong> from the <strong>Apps &amp; features</strong> list and then select <strong>Uninstall</strong>.</li>
+  <li>Click <strong>Uninstall</strong> to confirm your selection.</li>
+</ol>
+
+<blockquote>
+  <p><strong>Important</strong></p>
+
+  <p>Uninstalling Docker Desktop destroys Docker containers, images, volumes, and
+other Docker related data local to the machine, and removes the files generated
+by the application. Refer to the <a href="/desktop/backup-and-restore/">back up and restore data</a>
+section to learn how to preserve important data before uninstalling.</p>
+</blockquote>
+
+<h2 id="where-to-go-next">Where to go next</h2>
+
+<ul>
+  <li><a href="/docker-for-windows/">Getting started</a> introduces Docker Desktop for Windows.</li>
+  <li><a href="/get-started/">Get started with Docker</a> is a tutorial that teaches you how to
+deploy a multi-service stack.</li>
+  <li><a href="/docker-for-windows/troubleshoot/">Troubleshooting</a> describes common problems, workarounds, and
+how to get support.</li>
+  <li><a href="/desktop/faqs/">FAQs</a> provide answers to frequently asked questions.</li>
+  <li><a href="/docker-for-windows/release-notes/">Release notes</a> lists component updates, new features, and improvements associated with Docker Desktop releases.</li>
+  <li><a href="/desktop/backup-and-restore/">Back up and restore data</a> provides instructions on backing up and restoring data related to Docker.</li>
+</ul>
+<span class="glyphicon glyphicon-tags" style="padding-right: 10px"></span><span style="vertical-align: 2px"><a href="/search/?q=windows">windows</a>, <a href="/search/?q=install">install</a>, <a href="/search/?q=download">download</a>, <a href="/search/?q=run">run</a>, <a href="/search/?q=docker">docker</a>, <a href="/search/?q=local">local</a></span><div class="ratings-div"><div id="pd_rating_holder_8453675"></div></div></section>
+                    </main>
+                    <nav class="col-nav">
+                        <div id="sidebar-nav" class="sidebar hidden-sm hidden-xs">
+                            <div id="navbar" class="nav-sidebar">
+                                <ul class="nav jsTOCHorizontal hidden-md hidden-lg"></ul>
+                                <ul class="nav" id="jsTOCLeftNav"></ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="col-toc">
+                        <div class="sidebar hidden-xs hidden-sm">
+                            <div class="toc-nav">
+                                <div class="feedback-links">
+                                    <ul><li><a href="https://github.com/docker/docker.github.io/edit/master/docker-for-windows/install.md"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit this page</a></li><li><a href="https://github.com/docker/docker.github.io/issues/new?body=File: [docker-for-windows/install.md](https://docs.docker.com/docker-for-windows/install/)" class="nomunge"><i class="fa fa-check" aria-hidden="true"></i> Request docs changes</a></li>
+                                        <li><div class="toggle-mode">
+  <div class="icon">
+      <i class="fa fa-sun-o" aria-hidden="true"></i>
+  </div>
+  <div class="toggle-switch">
+      <label class="switch">
+          <input type="checkbox" id="switch-style">
+          <span class="slider round"></span>
+      </label>
+  </div>
+  <div class="icon">
+      <i class="fa fa-moon-o" aria-hidden="true"></i>
+  </div>
+</div>
+</li>
+                                    </ul>
+                                </div><div id="side-toc-title">On this page:</div>
+<ul id="my_toc" class="inline_toc">
+  <li><a href="#system-requirements" class="nomunge">System requirements</a>
+    <ul>
+      <li><a href="#hyper-v-backend-and-windows-containers" class="nomunge">Hyper-V backend and Windows containers</a></li>
+      <li><a href="#wsl-2-backend" class="nomunge">WSL 2 backend</a></li>
+      <li><a href="#whats-included-in-the-installer" class="nomunge">What’s included in the installer</a></li>
+      <li><a href="#about-windows-containers" class="nomunge">About Windows containers</a></li>
+    </ul>
+  </li>
+  <li><a href="#install-docker-desktop-on-windows" class="nomunge">Install Docker Desktop on Windows</a></li>
+  <li><a href="#start-docker-desktop" class="nomunge">Start Docker Desktop</a></li>
+  <li><a href="#automatic-updates" class="nomunge">Automatic updates</a></li>
+  <li><a href="#uninstall-docker-desktop" class="nomunge">Uninstall Docker Desktop</a></li>
+  <li><a href="#where-to-go-next" class="nomunge">Where to go next</a></li>
+</ul>
+
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+          
+    <div class="container">
+        <div class="top_footer">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/why-docker">Why Docker?</a></b></li>
+                        <li><a href="https://www.docker.com/what-container">What is a Container?</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/products/overview">Products</a></b></li>
+                        <li><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></li>
+                        <li><a href="https://www.docker.com/products/docker-hub">Docker Hub</a></li>
+                        <li><a href="https://www.docker.com/roadmap">Docker Product Roadmap</a></li>
+                        <li><b><a href="https://www.docker.com/products/docker-desktop">Features</a></b></li>
+                        <li><a href="https://www.docker.com/products/container-runtime">Container Runtime</a></li>
+                        <li><a href="https://www.docker.com/products/developer-tools">Developer Tools</a></li>
+                        <li><a href="https://www.docker.com/products/kubernetes">Kubernetes</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/products/docker-desktop">Developers</a></b></li>
+                        <li><a href="https://www.docker.com/use-cases">Use Cases</a></li>
+                        <li><a href="https://www.docker.com/play-with-docker">Play with Docker</a></li>
+                        <li><a href="https://www.docker.com/docker-community">Community</a></li>
+                        <li><a href="https://www.docker.com/open-source">Open Source</a></li>
+                        <li><a href="https://www.docker.com/community/docker-captains">Docker Captains</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/company" target="_blank" rel="noopener">Company</a></b></li>
+                        <li><a href="https://www.docker.com/company">About Us</a></li>
+                        <li><a href="https://www.docker.com/blog/" target="_blank" rel="noopener">Blog</a></li>
+                        <li><a href="https://www.docker.com/customers">Customers</a></li>
+                        <li><a href="https://www.docker.com/partners">Partners</a></li>
+                        <li><a href="https://www.docker.com/company/newsroom">Newsroom</a></li>
+                        <li><a href="https://www.docker.com/careers">Careers</a></li>
+                        <li><a href="https://www.docker.com/company/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <nav class="footer_sub_nav">
+                    <ul class="menu">
+                        <li><a href="http://status.docker.com/">Status</a></li>
+                        <li><a href="https://www.docker.com/docker-security">Security</a></li>
+                        <li><a href="https://www.docker.com/legal">Legal</a></li>
+                        <li><a href="https://www.docker.com/company/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="bottom_footer">
+            <div class="footer-copyright col-xs-12 col-md-8">
+                <p class="copyright">
+                    Copyright &copy; 2013-2021 Docker Inc. All rights reserved. </p>
+            </div>
+            <div class="footer_social_nav">
+                <ul class="nav-social">
+                    <li class="fa fa-twitter"><a href="http://twitter.com/docker">Twitter</a></li>
+                    <li class="fa fa-youtube"><a href="http://www.youtube.com/user/dockerrun">Youtube</a></li>
+                    <li class="fa fa-github"><a href="https://github.com/docker">GitHub</a></li>
+                    <li class="fa fa-linkedin"><a href="https://www.linkedin.com/company/docker">Linkedin</a></li>
+                    <li class="fa fa-facebook"><a href="https://www.facebook.com/docker.run">Facebook</a></li>
+                    <li class="fa fa-slideshare"><a href="https://www.slideshare.net/docker">Slideshare</a></li>
+                    <li class="fa fa-reddit"><a href="https://www.reddit.com/r/docker">Reddit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+    <script>const pageURL = "/docker-for-windows/install/";</script><script>
+    let PDRTJS_settings_8453675 = {
+        "id": "8453675",
+        "unique_id": "docker-for-windows/install.md",
+        "title": "Install Docker Desktop on Windows",
+        "font_family": "Open Sans, sans serif",
+        "font_color": "b9c2cc",
+        "font_align": "center",
+        "permalink": "https://github.com/docker/docker.github.io/blob/master/docker-for-windows/install.md"
+    };
+    (function (d, c, j) {
+        if (!document.getElementById(j)) {
+            let pd=d.createElement(c),s;pd.id=j;pd.src='https://polldaddy.com/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd, s);
+        }
+    }(document, 'script', 'pd-rating-js'));
+</script></body>
+</html>
