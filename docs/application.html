@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>docker_linux_containerization</title>
+  </head>
+  <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav">
+             <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="about.html">About Page</a>
+             </li>
+             <li class="nav-item">
+             <a class="nav-link" href="application.html">Application Hosts</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="docker.html">Docker</a>
+            </li>
+                 <li class="nav-item">
+            <a class="nav-link" href="linux.html">Linux Commands</a>
+            </li>
+                 <li class="nav-item">
+            <a class="nav-link" href="connecting.html">Connect Docker to Pycharm</a>
+            </li>
+            </ul>
+         </div>
+        </div>
+    </nav>
+ </div>
+
+  <div class="container-sm">
+    <div class="p-4 col">
+    <div class="card">
+      <img src="../images/app_host2.png" height="166" width="303" alt="image of virtualization vs. Containerization"/>
+        <div class="card-body">
+        <h5 class="card-title">What is Virtualization?</h5>
+        <p class="card-text">It is a general approach for getting out of in-house hardware assets. In the beginning, this
+            technique was a revelation because it allowed developers to run multiple OS(Operating system) in different VMs
+           (virtual
+            machines) all running on the same host. This dissolved the need for extra hardware resources.
+
+        Let’s have a look at some Pros-
+
+            <ul>
+            <li>Multiple OS can run at the same time</li>
+            <li>Easy recovery and maintenance in a condition of failure case</li>
+            <li>Due to less usage/need for infrastructure total cost of ownership came down</li>
+            </ul>
+
+            Though Virtualization also has some shortcomings. Running multiple VMs at the same time on Host OS leads to
+            performance breakdown/degradation. The reason behind this is because the guest OS runs on the top of host OS,
+            which will have its own kernel and dependencies, this takes up a large mass of system resources like Hard Disk,
+            Processor and RAM.
+
+            These are some Cons of Virtualization –
+            <ul>
+                <li>Unstable performance because of running multiple VMs</li>
+                <li>The efficiency of Hypervisors is not as good as the host OS</li>
+                <li>Long boot-up time </li>
+            </ul>
+
+            <h5>What is Containerization?</h5>
+
+            Containerization is a strategy of bringing Virtualization to the OS-level. Though Virtualization is an
+            abstraction to the hardware, containerization brings abstraction of OS. Containerization is more efficient
+            because there is no guest OS to utilize a host’s OS and do not have to share relevant libraries and resources,
+            unlike virtual machines. Containers works on bare-metal systems, cloud instances, and virtual machines,
+            across Linux, Windows, and Mac. Containerization is a lightweight alternative to full machine virtualization
+            that involves encapsulating an application in a container with its OS. Containerization boots up in a fraction
+            of seconds; this is because Container shares host OS and holds only those application which is related to
+            binaries and libraries.
+            </br></br>
+            <h5>There are noticeable differences between these two terms, which are as follows: </h5>
+            <ul>
+
+            <li><b>The advantage of multiple copies:</b> one of the major points that differentiate these two processes is
+            containers’ temporary behavior. Many copies of a container can exist at the same time in a system like orchestration.
+            If any containers failed, one can remove that and replace it, and there will be no change or impact on service.
+            Older versions can exist at the same time with the new versions. Removal and replacement of the new versions
+                can be done easily if any operation gets failed.</li>
+
+            <li><b>Scaling related workloads:</b> There is a vast difference between the scalability of a containerized workload
+                and a virtual workload. The containers contain only those services which are basic in nature and which
+                their functions require, but among those services, one can be a web server like Nginx and virtualization
+                workload system, like cabernets, having the capability of judging that when there is a need of scaling
+                out the number of containers based on the sequence of traffic follows and can copy the images of the container
+                on its own and also remove them from the system.</li>
+
+            <li><b>Foundation for running an application:</b> the Linux containers format is the foundation for containerization
+                format. So, containerization can only run the Linux application as it will support only the Linux environment.</li>
+
+
+            <li><b>Using microservices architecture:</b> Google firstly uses the architecture “microservices” and then by
+            Netflix. One can operate these systems without excluding any single application. In the form of functions, they
+            perform small workloads that may be contacted through API, and they perform different functions. These functions
+                can be seen in traditional applications, although many applications can perform the same functions on repeat.</li>
+           </ul>
+            <br><br>
+            <h5>Containerization vs Virtualization: Which one is better!</h5>
+            <br>
+            The assurance of which is better in Containers versus Virtual Machines (VMs) relies upon your objective.
+            However, virtualization empowers remaining tasks at hand to keep running in situations that are isolated from
+            their basic equipment by a layer of reflection. This reflection enables servers to be separated into VMs that
+            can run distinctive working frameworks.
+            <br>
+            Container innovation offers an elective strategy for Virtualization, in which a solitary working framework on
+            a host can run a wide range of users from the cloud. One approach to consider Containers versus VMs is that
+            while VMs run a few distinctive working frameworks on one process hub, while containers offer the chance to
+            virtualize the working framework itself.
+            <br><br>
+            <h5>Conclusion:</h5>
+            Containerization and Virtualization differ in many ways, but the primary difference is that containers
+            provide a way to virtualize an OS to run multiple workloads in a single OS instance. With VMs, the hardware
+            is virtualized to run multiple OS instances. The speed, agility, and portability of the container make it another
+            tool to streamline software development.
+         </p>
+
+        <a href="https://www.cloudmanagementinsider.com/containerization-vs-virtualization/" class="btn btn-primary">Link to Reference Article</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  </body>
+</html>
