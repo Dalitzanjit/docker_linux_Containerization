@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>timeline.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #e8bf6a;}
+.s3 { color: #bababa;}
+.s4 { color: #a9b7c6;}
+.s5 { color: #a5c261;}
+.s6 { color: #cc7832;}
+.s7 { color: #6897bb;}
+.s8 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+timeline.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* The actual timeline (the vertical ruler) */</span>
+<span class="s1">.</span><span class="s2">timeline </span><span class="s1">{</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">relative</span><span class="s6">;</span>
+  <span class="s3">max-width</span><span class="s4">: </span><span class="s7">1200</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">margin</span><span class="s4">: </span><span class="s7">0 </span><span class="s5">auto</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* The actual timeline (the vertical ruler) */</span>
+<span class="s1">.</span><span class="s2">timeline</span><span class="s4">::</span><span class="s2">after </span><span class="s1">{</span>
+  <span class="s3">content</span><span class="s4">: </span><span class="s8">''</span><span class="s6">;</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">absolute</span><span class="s6">;</span>
+  <span class="s3">width</span><span class="s4">: </span><span class="s7">6</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">background-color</span><span class="s4">: </span><span class="s5">white</span><span class="s6">;</span>
+  <span class="s3">top</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">bottom</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">left</span><span class="s4">: </span><span class="s7">50</span><span class="s1">%</span><span class="s6">;</span>
+  <span class="s3">margin-left</span><span class="s4">: </span><span class="s1">-</span><span class="s7">3</span><span class="s5">px</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Container around content */</span>
+<span class="s1">.</span><span class="s2">container-timeline </span><span class="s1">{</span>
+  <span class="s3">padding</span><span class="s4">: </span><span class="s7">10</span><span class="s5">px </span><span class="s7">40</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">relative</span><span class="s6">;</span>
+  <span class="s3">background-color</span><span class="s4">: </span><span class="s5">inherit</span><span class="s6">;</span>
+  <span class="s3">width</span><span class="s4">: </span><span class="s7">50</span><span class="s1">%</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* The circles on the timeline */</span>
+<span class="s1">.</span><span class="s2">container-timeline</span><span class="s4">::</span><span class="s2">after </span><span class="s1">{</span>
+  <span class="s3">content</span><span class="s4">: </span><span class="s8">''</span><span class="s6">;</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">absolute</span><span class="s6">;</span>
+  <span class="s3">width</span><span class="s4">: </span><span class="s7">25</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">height</span><span class="s4">: </span><span class="s7">25</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">right</span><span class="s4">: </span><span class="s1">-</span><span class="s7">13</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">background-color</span><span class="s4">: </span><span class="s5">white</span><span class="s6">;</span>
+  <span class="s3">border</span><span class="s4">: </span><span class="s7">4</span><span class="s5">px solid </span><span class="s7">#FF9F55</span><span class="s6">;</span>
+  <span class="s3">top</span><span class="s4">: </span><span class="s7">15</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">border-radius</span><span class="s4">: </span><span class="s7">50</span><span class="s1">%</span><span class="s6">;</span>
+  <span class="s3">z-index</span><span class="s4">: </span><span class="s7">1</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Place the container to the left */</span>
+<span class="s1">.</span><span class="s2">left </span><span class="s1">{</span>
+  <span class="s3">left</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Place the container to the right */</span>
+<span class="s1">.</span><span class="s2">right </span><span class="s1">{</span>
+  <span class="s3">left</span><span class="s4">: </span><span class="s7">50</span><span class="s1">%</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Add arrows to the left container (pointing right) */</span>
+<span class="s1">.</span><span class="s2">left</span><span class="s4">::</span><span class="s2">before </span><span class="s1">{</span>
+  <span class="s3">content</span><span class="s4">: </span><span class="s8">&quot; &quot;</span><span class="s6">;</span>
+  <span class="s3">height</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">absolute</span><span class="s6">;</span>
+  <span class="s3">top</span><span class="s4">: </span><span class="s7">22</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">width</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">z-index</span><span class="s4">: </span><span class="s7">1</span><span class="s6">;</span>
+  <span class="s3">right</span><span class="s4">: </span><span class="s7">30</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">border</span><span class="s4">: </span><span class="s5">medium solid white</span><span class="s6">;</span>
+  <span class="s3">border-width</span><span class="s4">: </span><span class="s7">10</span><span class="s5">px </span><span class="s7">0 10</span><span class="s5">px </span><span class="s7">10</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">border-color</span><span class="s4">: </span><span class="s5">transparent transparent transparent white</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Add arrows to the right container (pointing left) */</span>
+<span class="s1">.</span><span class="s2">right</span><span class="s4">::</span><span class="s2">before </span><span class="s1">{</span>
+  <span class="s3">content</span><span class="s4">: </span><span class="s8">&quot; &quot;</span><span class="s6">;</span>
+  <span class="s3">height</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">absolute</span><span class="s6">;</span>
+  <span class="s3">top</span><span class="s4">: </span><span class="s7">22</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">width</span><span class="s4">: </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">z-index</span><span class="s4">: </span><span class="s7">1</span><span class="s6">;</span>
+  <span class="s3">left</span><span class="s4">: </span><span class="s7">30</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">border</span><span class="s4">: </span><span class="s5">medium solid white</span><span class="s6">;</span>
+  <span class="s3">border-width</span><span class="s4">: </span><span class="s7">10</span><span class="s5">px </span><span class="s7">10</span><span class="s5">px </span><span class="s7">10</span><span class="s5">px </span><span class="s7">0</span><span class="s6">;</span>
+  <span class="s3">border-color</span><span class="s4">: </span><span class="s5">transparent white transparent transparent</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Fix the circle for containers on the right side */</span>
+<span class="s1">.</span><span class="s2">right</span><span class="s4">::</span><span class="s2">after </span><span class="s1">{</span>
+  <span class="s3">left</span><span class="s4">: </span><span class="s1">-</span><span class="s7">12</span><span class="s5">px</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* The actual content */</span>
+<span class="s1">.</span><span class="s2">content </span><span class="s1">{</span>
+  <span class="s3">padding</span><span class="s4">: </span><span class="s7">20</span><span class="s5">px </span><span class="s7">30</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s3">background-color</span><span class="s4">: </span><span class="s5">white</span><span class="s6">;</span>
+  <span class="s3">position</span><span class="s4">: </span><span class="s5">relative</span><span class="s6">;</span>
+  <span class="s3">border-radius</span><span class="s4">: </span><span class="s7">6</span><span class="s5">px</span><span class="s6">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Media queries - Responsive timeline on screens less than 600px wide */</span>
+<span class="s6">@media </span><span class="s5">screen </span><span class="s2">and </span><span class="s1">(</span><span class="s3">max-width</span><span class="s4">: </span><span class="s7">600</span><span class="s5">px</span><span class="s1">) {</span>
+<span class="s0">/* Place the timelime to the left */</span>
+  <span class="s1">.</span><span class="s2">timeline</span><span class="s4">::</span><span class="s2">after </span><span class="s1">{</span>
+    <span class="s3">left</span><span class="s4">: </span><span class="s7">31</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s1">}</span>
+
+<span class="s0">/* Full-width containers */</span>
+  <span class="s1">.</span><span class="s2">container-timeline </span><span class="s1">{</span>
+    <span class="s3">width</span><span class="s4">: </span><span class="s7">100</span><span class="s1">%</span><span class="s6">;</span>
+    <span class="s3">padding-left</span><span class="s4">: </span><span class="s7">70</span><span class="s5">px</span><span class="s6">;</span>
+    <span class="s3">padding-right</span><span class="s4">: </span><span class="s7">25</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s1">}</span>
+
+<span class="s0">/* Make sure that all arrows are pointing leftwards */</span>
+  <span class="s1">.</span><span class="s2">container-timeline</span><span class="s4">::</span><span class="s2">before </span><span class="s1">{</span>
+    <span class="s3">left</span><span class="s4">: </span><span class="s7">60</span><span class="s5">px</span><span class="s6">;</span>
+    <span class="s3">border</span><span class="s4">: </span><span class="s5">medium solid white</span><span class="s6">;</span>
+    <span class="s3">border-width</span><span class="s4">: </span><span class="s7">10</span><span class="s5">px </span><span class="s7">10</span><span class="s5">px </span><span class="s7">10</span><span class="s5">px </span><span class="s7">0</span><span class="s6">;</span>
+    <span class="s3">border-color</span><span class="s4">: </span><span class="s5">transparent white transparent transparent</span><span class="s6">;</span>
+  <span class="s1">}</span>
+
+<span class="s0">/* Make sure all circles are at the same spot */</span>
+  <span class="s1">.</span><span class="s2">left</span><span class="s4">::</span><span class="s2">after</span><span class="s6">, </span><span class="s1">.</span><span class="s2">right</span><span class="s4">::</span><span class="s2">after </span><span class="s1">{</span>
+    <span class="s3">left</span><span class="s4">: </span><span class="s7">10</span><span class="s5">px</span><span class="s6">;</span>
+  <span class="s1">}</span>
+
+<span class="s0">/* Make all right containers behave like the left ones */</span>
+  <span class="s1">.</span><span class="s2">right </span><span class="s1">{</span>
+    <span class="s3">left</span><span class="s4">: </span><span class="s7">0</span><span class="s1">%</span><span class="s6">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
