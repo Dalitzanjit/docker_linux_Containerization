@@ -1,0 +1,453 @@
+<html>
+<head>
+<title>bootstrap-reboot.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #e8bf6a;}
+.s3 { color: #cc7832;}
+.s4 { color: #a9b7c6;}
+.s5 { color: #bababa;}
+.s6 { color: #a5c261;}
+.s7 { color: #6897bb;}
+.s8 { color: #6a8759;}
+.s9 { color: #cc7832; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+bootstrap-reboot.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/*! 
+ * Bootstrap Reboot v5.0.0-beta2 (https://getbootstrap.com/) 
+ * Copyright 2011-2021 The Bootstrap Authors 
+ * Copyright 2011-2021 Twitter, Inc. 
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) 
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) 
+ */</span>
+<span class="s2">*</span><span class="s3">,</span>
+<span class="s2">*</span><span class="s4">::</span><span class="s2">before</span><span class="s3">,</span>
+<span class="s2">*</span><span class="s4">::</span><span class="s2">after </span><span class="s1">{</span>
+  <span class="s5">box-sizing</span><span class="s4">: </span><span class="s6">border-box</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s3">@media </span><span class="s1">(</span><span class="s5">prefers-reduced-motion</span><span class="s4">: </span><span class="s6">no-preference</span><span class="s1">) {</span>
+  <span class="s4">:</span><span class="s2">root </span><span class="s1">{</span>
+    <span class="s5">scroll-behavior</span><span class="s4">: </span><span class="s6">smooth</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">body </span><span class="s1">{</span>
+  <span class="s5">margin</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">font-family</span><span class="s4">: </span><span class="s2">system-ui</span><span class="s3">, </span><span class="s6">-apple-system</span><span class="s3">, </span><span class="s8">&quot;Segoe UI&quot;</span><span class="s3">, </span><span class="s2">Roboto</span><span class="s3">, </span><span class="s8">&quot;Helvetica Neue&quot;</span><span class="s3">, </span><span class="s2">Arial</span><span class="s3">, </span><span class="s8">&quot;Noto Sans&quot;</span><span class="s3">, </span><span class="s8">&quot;Liberation Sans&quot;</span><span class="s3">, </span><span class="s6">sans-serif</span><span class="s3">, </span><span class="s8">&quot;Apple Color Emoji&quot;</span><span class="s3">, </span><span class="s8">&quot;Segoe UI Emoji&quot;</span><span class="s3">, </span><span class="s8">&quot;Segoe UI Symbol&quot;</span><span class="s3">, </span><span class="s8">&quot;Noto Color Emoji&quot;</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">font-weight</span><span class="s4">: </span><span class="s7">400</span><span class="s3">;</span>
+  <span class="s5">line-height</span><span class="s4">: </span><span class="s7">1.5</span><span class="s3">;</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s7">#212529</span><span class="s3">;</span>
+  <span class="s5">background-color</span><span class="s4">: </span><span class="s7">#fff</span><span class="s3">;</span>
+  <span class="s5">-webkit-text-size-adjust</span><span class="s4">: </span><span class="s7">100</span><span class="s1">%</span><span class="s3">;</span>
+  <span class="s5">-webkit-tap-highlight-color</span><span class="s4">: </span><span class="s2">rgba</span><span class="s1">(</span><span class="s7">0</span><span class="s3">, </span><span class="s7">0</span><span class="s3">, </span><span class="s7">0</span><span class="s3">, </span><span class="s7">0</span><span class="s1">)</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s1">[</span><span class="s2">tabindex</span><span class="s1">=</span><span class="s8">&quot;-1&quot;</span><span class="s1">]</span><span class="s4">:</span><span class="s2">focus</span><span class="s4">:</span><span class="s2">not</span><span class="s1">(</span><span class="s4">:</span><span class="s2">focus-visible</span><span class="s1">) {</span>
+  <span class="s5">outline</span><span class="s4">: </span><span class="s7">0 </span><span class="s9">!important</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">hr </span><span class="s1">{</span>
+  <span class="s5">margin</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">background-color</span><span class="s4">: </span><span class="s2">currentColor</span><span class="s3">;</span>
+  <span class="s5">border</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">opacity</span><span class="s4">: </span><span class="s7">0.25</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">hr</span><span class="s4">:</span><span class="s2">not</span><span class="s1">([</span><span class="s2">size</span><span class="s1">]) {</span>
+  <span class="s5">height</span><span class="s4">: </span><span class="s7">1</span><span class="s6">px</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">h6</span><span class="s3">, </span><span class="s2">h5</span><span class="s3">, </span><span class="s2">h4</span><span class="s3">, </span><span class="s2">h3</span><span class="s3">, </span><span class="s2">h2</span><span class="s3">, </span><span class="s2">h1 </span><span class="s1">{</span>
+  <span class="s5">margin-top</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">0.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">font-weight</span><span class="s4">: </span><span class="s7">500</span><span class="s3">;</span>
+  <span class="s5">line-height</span><span class="s4">: </span><span class="s7">1.2</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">h1 </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s2">calc</span><span class="s1">(</span><span class="s7">1.375</span><span class="s6">rem </span><span class="s1">+ </span><span class="s7">1.5</span><span class="s6">vw</span><span class="s1">)</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s3">@media </span><span class="s1">(</span><span class="s5">min-width</span><span class="s4">: </span><span class="s7">1200</span><span class="s6">px</span><span class="s1">) {</span>
+  <span class="s2">h1 </span><span class="s1">{</span>
+    <span class="s5">font-size</span><span class="s4">: </span><span class="s7">2.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">h2 </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s2">calc</span><span class="s1">(</span><span class="s7">1.325</span><span class="s6">rem </span><span class="s1">+ </span><span class="s7">0.9</span><span class="s6">vw</span><span class="s1">)</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s3">@media </span><span class="s1">(</span><span class="s5">min-width</span><span class="s4">: </span><span class="s7">1200</span><span class="s6">px</span><span class="s1">) {</span>
+  <span class="s2">h2 </span><span class="s1">{</span>
+    <span class="s5">font-size</span><span class="s4">: </span><span class="s7">2</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">h3 </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s2">calc</span><span class="s1">(</span><span class="s7">1.3</span><span class="s6">rem </span><span class="s1">+ </span><span class="s7">0.6</span><span class="s6">vw</span><span class="s1">)</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s3">@media </span><span class="s1">(</span><span class="s5">min-width</span><span class="s4">: </span><span class="s7">1200</span><span class="s6">px</span><span class="s1">) {</span>
+  <span class="s2">h3 </span><span class="s1">{</span>
+    <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1.75</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">h4 </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s2">calc</span><span class="s1">(</span><span class="s7">1.275</span><span class="s6">rem </span><span class="s1">+ </span><span class="s7">0.3</span><span class="s6">vw</span><span class="s1">)</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s3">@media </span><span class="s1">(</span><span class="s5">min-width</span><span class="s4">: </span><span class="s7">1200</span><span class="s6">px</span><span class="s1">) {</span>
+  <span class="s2">h4 </span><span class="s1">{</span>
+    <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">h5 </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1.25</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">h6 </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">p </span><span class="s1">{</span>
+  <span class="s5">margin-top</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">abbr</span><span class="s1">[</span><span class="s2">title</span><span class="s1">]</span><span class="s3">,</span>
+<span class="s2">abbr</span><span class="s1">[</span><span class="s2">data-bs-original-title</span><span class="s1">] {</span>
+  <span class="s5">text-decoration</span><span class="s4">: </span><span class="s6">underline</span><span class="s3">;</span>
+  <span class="s5">-webkit-text-decoration</span><span class="s4">: </span><span class="s6">underline dotted</span><span class="s3">;</span>
+  <span class="s5">text-decoration</span><span class="s4">: </span><span class="s6">underline dotted</span><span class="s3">;</span>
+  <span class="s5">cursor</span><span class="s4">: </span><span class="s6">help</span><span class="s3">;</span>
+  <span class="s5">-webkit-text-decoration-skip-ink</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+  <span class="s5">text-decoration-skip-ink</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">address </span><span class="s1">{</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">font-style</span><span class="s4">: </span><span class="s6">normal</span><span class="s3">;</span>
+  <span class="s5">line-height</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">ol</span><span class="s3">,</span>
+<span class="s2">ul </span><span class="s1">{</span>
+  <span class="s5">padding-left</span><span class="s4">: </span><span class="s7">2</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">ol</span><span class="s3">,</span>
+<span class="s2">ul</span><span class="s3">,</span>
+<span class="s2">dl </span><span class="s1">{</span>
+  <span class="s5">margin-top</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">ol ol</span><span class="s3">,</span>
+<span class="s2">ul ul</span><span class="s3">,</span>
+<span class="s2">ol ul</span><span class="s3">,</span>
+<span class="s2">ul ol </span><span class="s1">{</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">dt </span><span class="s1">{</span>
+  <span class="s5">font-weight</span><span class="s4">: </span><span class="s7">700</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">dd </span><span class="s1">{</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">0.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">margin-left</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">blockquote </span><span class="s1">{</span>
+  <span class="s5">margin</span><span class="s4">: </span><span class="s7">0 0 1</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">b</span><span class="s3">,</span>
+<span class="s2">strong </span><span class="s1">{</span>
+  <span class="s5">font-weight</span><span class="s4">: </span><span class="s6">bolder</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">small </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">0.875</span><span class="s6">em</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">mark </span><span class="s1">{</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0.2</span><span class="s6">em</span><span class="s3">;</span>
+  <span class="s5">background-color</span><span class="s4">: </span><span class="s7">#fcf8e3</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">sub</span><span class="s3">,</span>
+<span class="s2">sup </span><span class="s1">{</span>
+  <span class="s5">position</span><span class="s4">: </span><span class="s6">relative</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">0.75</span><span class="s6">em</span><span class="s3">;</span>
+  <span class="s5">line-height</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">vertical-align</span><span class="s4">: </span><span class="s6">baseline</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">sub </span><span class="s1">{</span>
+  <span class="s5">bottom</span><span class="s4">: </span><span class="s1">-</span><span class="s7">0.25</span><span class="s6">em</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">sup </span><span class="s1">{</span>
+  <span class="s5">top</span><span class="s4">: </span><span class="s1">-</span><span class="s7">0.5</span><span class="s6">em</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">a </span><span class="s1">{</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s7">#0d6efd</span><span class="s3">;</span>
+  <span class="s5">text-decoration</span><span class="s4">: </span><span class="s6">underline</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s2">a</span><span class="s4">:</span><span class="s2">hover </span><span class="s1">{</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s7">#0a58ca</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">a</span><span class="s4">:</span><span class="s2">not</span><span class="s1">([</span><span class="s2">href</span><span class="s1">])</span><span class="s4">:</span><span class="s2">not</span><span class="s1">([</span><span class="s2">class</span><span class="s1">])</span><span class="s3">, </span><span class="s2">a</span><span class="s4">:</span><span class="s2">not</span><span class="s1">([</span><span class="s2">href</span><span class="s1">])</span><span class="s4">:</span><span class="s2">not</span><span class="s1">([</span><span class="s2">class</span><span class="s1">])</span><span class="s4">:</span><span class="s2">hover </span><span class="s1">{</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">text-decoration</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">pre</span><span class="s3">,</span>
+<span class="s2">code</span><span class="s3">,</span>
+<span class="s2">kbd</span><span class="s3">,</span>
+<span class="s2">samp </span><span class="s1">{</span>
+  <span class="s5">font-family</span><span class="s4">: </span><span class="s2">SFMono-Regular</span><span class="s3">, </span><span class="s2">Menlo</span><span class="s3">, </span><span class="s2">Monaco</span><span class="s3">, </span><span class="s2">Consolas</span><span class="s3">, </span><span class="s8">&quot;Liberation Mono&quot;</span><span class="s3">, </span><span class="s8">&quot;Courier New&quot;</span><span class="s3">, </span><span class="s6">monospace</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1</span><span class="s6">em</span><span class="s3">;</span>
+  <span class="s5">direction</span><span class="s4">: </span><span class="s6">ltr </span><span class="s0">/* rtl:ignore */</span><span class="s3">;</span>
+  <span class="s5">unicode-bidi</span><span class="s4">: </span><span class="s6">bidi-override</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">pre </span><span class="s1">{</span>
+  <span class="s5">display</span><span class="s4">: </span><span class="s6">block</span><span class="s3">;</span>
+  <span class="s5">margin-top</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">1</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">overflow</span><span class="s4">: </span><span class="s6">auto</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">0.875</span><span class="s6">em</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s2">pre code </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">word-break</span><span class="s4">: </span><span class="s6">normal</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">code </span><span class="s1">{</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">0.875</span><span class="s6">em</span><span class="s3">;</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s7">#d63384</span><span class="s3">;</span>
+  <span class="s5">word-wrap</span><span class="s4">: </span><span class="s6">break-word</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s2">a </span><span class="s1">&gt; </span><span class="s2">code </span><span class="s1">{</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">kbd </span><span class="s1">{</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0.2</span><span class="s6">rem </span><span class="s7">0.4</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">0.875</span><span class="s6">em</span><span class="s3">;</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s7">#fff</span><span class="s3">;</span>
+  <span class="s5">background-color</span><span class="s4">: </span><span class="s7">#212529</span><span class="s3">;</span>
+  <span class="s5">border-radius</span><span class="s4">: </span><span class="s7">0.2</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s2">kbd kbd </span><span class="s1">{</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1</span><span class="s6">em</span><span class="s3">;</span>
+  <span class="s5">font-weight</span><span class="s4">: </span><span class="s7">700</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">figure </span><span class="s1">{</span>
+  <span class="s5">margin</span><span class="s4">: </span><span class="s7">0 0 1</span><span class="s6">rem</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">img</span><span class="s3">,</span>
+<span class="s2">svg </span><span class="s1">{</span>
+  <span class="s5">vertical-align</span><span class="s4">: </span><span class="s6">middle</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">table </span><span class="s1">{</span>
+  <span class="s5">caption-side</span><span class="s4">: </span><span class="s6">bottom</span><span class="s3">;</span>
+  <span class="s5">border-collapse</span><span class="s4">: </span><span class="s6">collapse</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">caption </span><span class="s1">{</span>
+  <span class="s5">padding-top</span><span class="s4">: </span><span class="s7">0.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">padding-bottom</span><span class="s4">: </span><span class="s7">0.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">color</span><span class="s4">: </span><span class="s7">#6c757d</span><span class="s3">;</span>
+  <span class="s5">text-align</span><span class="s4">: </span><span class="s6">left</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">th </span><span class="s1">{</span>
+  <span class="s5">text-align</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">text-align</span><span class="s4">: </span><span class="s6">-webkit-match-parent</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">thead</span><span class="s3">,</span>
+<span class="s2">tbody</span><span class="s3">,</span>
+<span class="s2">tfoot</span><span class="s3">,</span>
+<span class="s2">tr</span><span class="s3">,</span>
+<span class="s2">td</span><span class="s3">,</span>
+<span class="s2">th </span><span class="s1">{</span>
+  <span class="s5">border-color</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">border-style</span><span class="s4">: </span><span class="s6">solid</span><span class="s3">;</span>
+  <span class="s5">border-width</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">label </span><span class="s1">{</span>
+  <span class="s5">display</span><span class="s4">: </span><span class="s6">inline-block</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">button </span><span class="s1">{</span>
+  <span class="s5">border-radius</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">button</span><span class="s4">:</span><span class="s2">focus</span><span class="s4">:</span><span class="s2">not</span><span class="s1">(</span><span class="s4">:</span><span class="s2">focus-visible</span><span class="s1">) {</span>
+  <span class="s5">outline</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">input</span><span class="s3">,</span>
+<span class="s2">button</span><span class="s3">,</span>
+<span class="s2">select</span><span class="s3">,</span>
+<span class="s2">optgroup</span><span class="s3">,</span>
+<span class="s2">textarea </span><span class="s1">{</span>
+  <span class="s5">margin</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">font-family</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">line-height</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">button</span><span class="s3">,</span>
+<span class="s2">select </span><span class="s1">{</span>
+  <span class="s5">text-transform</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s1">[</span><span class="s2">role</span><span class="s1">=</span><span class="s2">button</span><span class="s1">] {</span>
+  <span class="s5">cursor</span><span class="s4">: </span><span class="s6">pointer</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">select </span><span class="s1">{</span>
+  <span class="s5">word-wrap</span><span class="s4">: </span><span class="s6">normal</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s1">[</span><span class="s2">list</span><span class="s1">]</span><span class="s4">::</span><span class="s2">-webkit-calendar-picker-indicator </span><span class="s1">{</span>
+  <span class="s5">display</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">button</span><span class="s3">,</span>
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">button</span><span class="s1">]</span><span class="s3">,</span>
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">reset</span><span class="s1">]</span><span class="s3">,</span>
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">submit</span><span class="s1">] {</span>
+  <span class="s5">-webkit-appearance</span><span class="s4">: </span><span class="s6">button</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s2">button</span><span class="s4">:</span><span class="s2">not</span><span class="s1">(</span><span class="s4">:</span><span class="s2">disabled</span><span class="s1">)</span><span class="s3">,</span>
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">button</span><span class="s1">]</span><span class="s4">:</span><span class="s2">not</span><span class="s1">(</span><span class="s4">:</span><span class="s2">disabled</span><span class="s1">)</span><span class="s3">,</span>
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">reset</span><span class="s1">]</span><span class="s4">:</span><span class="s2">not</span><span class="s1">(</span><span class="s4">:</span><span class="s2">disabled</span><span class="s1">)</span><span class="s3">,</span>
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">submit</span><span class="s1">]</span><span class="s4">:</span><span class="s2">not</span><span class="s1">(</span><span class="s4">:</span><span class="s2">disabled</span><span class="s1">) {</span>
+  <span class="s5">cursor</span><span class="s4">: </span><span class="s6">pointer</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s4">::</span><span class="s2">-moz-focus-inner </span><span class="s1">{</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">border-style</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">textarea </span><span class="s1">{</span>
+  <span class="s5">resize</span><span class="s4">: </span><span class="s6">vertical</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">fieldset </span><span class="s1">{</span>
+  <span class="s5">min-width</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">margin</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">border</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">legend </span><span class="s1">{</span>
+  <span class="s5">float</span><span class="s4">: </span><span class="s6">left</span><span class="s3">;</span>
+  <span class="s5">width</span><span class="s4">: </span><span class="s7">100</span><span class="s1">%</span><span class="s3">;</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+  <span class="s5">margin-bottom</span><span class="s4">: </span><span class="s7">0.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s5">font-size</span><span class="s4">: </span><span class="s2">calc</span><span class="s1">(</span><span class="s7">1.275</span><span class="s6">rem </span><span class="s1">+ </span><span class="s7">0.3</span><span class="s6">vw</span><span class="s1">)</span><span class="s3">;</span>
+  <span class="s5">line-height</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+<span class="s1">}</span>
+<span class="s3">@media </span><span class="s1">(</span><span class="s5">min-width</span><span class="s4">: </span><span class="s7">1200</span><span class="s6">px</span><span class="s1">) {</span>
+  <span class="s2">legend </span><span class="s1">{</span>
+    <span class="s5">font-size</span><span class="s4">: </span><span class="s7">1.5</span><span class="s6">rem</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+<span class="s2">legend </span><span class="s1">+ </span><span class="s2">* </span><span class="s1">{</span>
+  <span class="s5">clear</span><span class="s4">: </span><span class="s6">left</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-fields-wrapper</span><span class="s3">,</span>
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-text</span><span class="s3">,</span>
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-minute</span><span class="s3">,</span>
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-hour-field</span><span class="s3">,</span>
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-day-field</span><span class="s3">,</span>
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-month-field</span><span class="s3">,</span>
+<span class="s4">::</span><span class="s2">-webkit-datetime-edit-year-field </span><span class="s1">{</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s4">::</span><span class="s2">-webkit-inner-spin-button </span><span class="s1">{</span>
+  <span class="s5">height</span><span class="s4">: </span><span class="s6">auto</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">search</span><span class="s1">] {</span>
+  <span class="s5">outline-offset</span><span class="s4">: </span><span class="s1">-</span><span class="s7">2</span><span class="s6">px</span><span class="s3">;</span>
+  <span class="s5">-webkit-appearance</span><span class="s4">: </span><span class="s6">textfield</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* rtl:raw: 
+[type=&quot;tel&quot;], 
+[type=&quot;url&quot;], 
+[type=&quot;email&quot;], 
+[type=&quot;number&quot;] { 
+  direction: ltr; 
+} 
+*/</span>
+<span class="s4">::</span><span class="s2">-webkit-search-decoration </span><span class="s1">{</span>
+  <span class="s5">-webkit-appearance</span><span class="s4">: </span><span class="s6">none</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s4">::</span><span class="s2">-webkit-color-swatch-wrapper </span><span class="s1">{</span>
+  <span class="s5">padding</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s4">::</span><span class="s2">file-selector-button </span><span class="s1">{</span>
+  <span class="s5">font</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s4">::</span><span class="s2">-webkit-file-upload-button </span><span class="s1">{</span>
+  <span class="s5">font</span><span class="s4">: </span><span class="s6">inherit</span><span class="s3">;</span>
+  <span class="s5">-webkit-appearance</span><span class="s4">: </span><span class="s6">button</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">output </span><span class="s1">{</span>
+  <span class="s5">display</span><span class="s4">: </span><span class="s6">inline-block</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">iframe </span><span class="s1">{</span>
+  <span class="s5">border</span><span class="s4">: </span><span class="s7">0</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">summary </span><span class="s1">{</span>
+  <span class="s5">display</span><span class="s4">: </span><span class="s6">list-item</span><span class="s3">;</span>
+  <span class="s5">cursor</span><span class="s4">: </span><span class="s6">pointer</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s2">progress </span><span class="s1">{</span>
+  <span class="s5">vertical-align</span><span class="s4">: </span><span class="s6">baseline</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s1">[</span><span class="s2">hidden</span><span class="s1">] {</span>
+  <span class="s5">display</span><span class="s4">: </span><span class="s6">none </span><span class="s9">!important</span><span class="s3">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/*# sourceMappingURL=bootstrap-reboot.css.map */</span></pre>
+</body>
+</html>
