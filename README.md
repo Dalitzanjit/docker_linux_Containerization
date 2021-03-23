@@ -1,5 +1,5 @@
 # docker_linux_Containerization 
-http://localhost:63342/docker_linux_Containerization/docs/index.html?_ijt=fml7njmubvbm15fnhjqlt9qhg7
+ https://dalitzanjit.github.io/docker_linux_Containerization/
 
 In this assignment I want you to work in a team to create a website that teaches a new user about what Docker is and how it compares to virtualization.  You should use pictures, text, and link to other resources for additional information.  The website should have the following web pages:
 
