@@ -1,0 +1,457 @@
+<html>
+<head>
+<title>Install Docker Desktop on Windows _ Docker Documentation.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #e8bf6a;}
+.s3 { color: #bababa;}
+.s4 { color: #a5c261;}
+.s5 { color: #a9b7c6;}
+.s6 { color: #cc7832;}
+.s7 { color: #6a8759;}
+.s8 { color: #6897bb;}
+.s9 { color: #6d9cbe;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Install Docker Desktop on Windows _ Docker Documentation.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!-- Page generated 2021-03-22 18:53:17 +0000--&gt;</span>
+<span class="s2">&lt;!DOCTYPE </span><span class="s3">html</span><span class="s2">&gt;</span>
+<span class="s2">&lt;html </span><span class="s3">lang</span><span class="s4">=&quot;en&quot;</span><span class="s2">&gt;&lt;head&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">http-equiv</span><span class="s4">=&quot;Content-Type&quot; </span><span class="s3">content</span><span class="s4">=&quot;text/html; charset=UTF-8&quot;</span><span class="s2">&gt;</span><span class="s0">&lt;!-- Google Tag Manager --&gt;</span>
+  <span class="s2">&lt;script&gt;</span><span class="s5">(</span><span class="s6">function</span><span class="s5">(w</span><span class="s6">,</span><span class="s1">d</span><span class="s6">,</span><span class="s1">s</span><span class="s6">,</span><span class="s1">l</span><span class="s6">,</span><span class="s1">i){w[l]=w[l]||[]</span><span class="s6">;</span><span class="s1">w[l].push({</span><span class="s7">'gtm.start'</span><span class="s5">:</span>
+  <span class="s6">new </span><span class="s1">Date().getTime()</span><span class="s6">,</span><span class="s1">event:</span><span class="s7">'gtm.js'</span><span class="s5">})</span><span class="s6">;var </span><span class="s1">f=d.getElementsByTagName(s)[</span><span class="s8">0</span><span class="s5">]</span><span class="s6">,</span>
+  <span class="s1">j=d.createElement(s)</span><span class="s6">,</span><span class="s1">dl=l!=</span><span class="s7">'dataLayer'</span><span class="s5">?</span><span class="s7">'&amp;l='</span><span class="s5">+l:</span><span class="s7">''</span><span class="s6">;</span><span class="s1">j.async=</span><span class="s6">true;</span><span class="s1">j.src=</span>
+  <span class="s7">'https://www.googletagmanager.com/gtm.js?id='</span><span class="s5">+i+dl</span><span class="s6">;</span><span class="s1">f.parentNode.insertBefore(j</span><span class="s6">,</span><span class="s1">f)</span><span class="s6">;</span>
+  <span class="s5">})(window</span><span class="s6">,</span><span class="s1">document</span><span class="s6">,</span><span class="s7">'script'</span><span class="s6">,</span><span class="s7">'dataLayer'</span><span class="s6">,</span><span class="s7">'GTM-WL2QLG5'</span><span class="s5">)</span><span class="s6">;</span><span class="s2">&lt;/script&gt;</span>
+<span class="s2">&lt;title&gt;</span><span class="s5">Install Docker Desktop on Windows | Docker Documentation</span><span class="s2">&lt;/title&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;description&quot; </span><span class="s3">content</span><span class="s4">=&quot;How to install Docker Desktop for Windows&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;keywords&quot; </span><span class="s3">content</span><span class="s4">=&quot;windows, install, download, run, docker, local&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;canonical&quot; </span><span class="s3">href</span><span class="s4">=&quot;https://docs.docker.com/docker-for-windows/install/&quot; </span><span class="s2">/&gt;</span>
+
+  <span class="s0">&lt;!-- favicon --&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;icon&quot; </span><span class="s3">type</span><span class="s4">=&quot;image/x-icon&quot; </span><span class="s3">href</span><span class="s4">=&quot;/favicons/docs@2x.ico&quot; </span><span class="s3">sizes</span><span class="s4">=&quot;129x128&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;apple-touch-icon&quot; </span><span class="s3">type</span><span class="s4">=&quot;image/x-icon&quot; </span><span class="s3">href</span><span class="s4">=&quot;/favicons/docs@2x.ico&quot; </span><span class="s3">sizes</span><span class="s4">=&quot;129x128&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;msapplication-TileImage&quot; </span><span class="s3">content</span><span class="s4">=&quot;/favicons/docs@2x.ico&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:image&quot; </span><span class="s3">content</span><span class="s4">=&quot;/favicons/docs@2x.ico&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;theme-color&quot; </span><span class="s3">content</span><span class="s4">=&quot;#2496ed&quot; </span><span class="s2">/&gt;</span>
+
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;viewport&quot; </span><span class="s3">content</span><span class="s4">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s2">&gt;&lt;script </span><span class="s3">defer src</span><span class="s4">=&quot;/js/theme-switcher.js&quot;</span><span class="s2">&gt;&lt;/script&gt;</span>
+  <span class="s2">&lt;script </span><span class="s3">defer src</span><span class="s4">=&quot;/js/anchorlinks.js&quot;</span><span class="s2">&gt;&lt;/script&gt;</span>
+  <span class="s2">&lt;script </span><span class="s3">defer src</span><span class="s4">=&quot;/js/jquery.js&quot;</span><span class="s2">&gt;&lt;/script&gt;</span>
+  <span class="s2">&lt;script </span><span class="s3">defer src</span><span class="s4">=&quot;/js/bootstrap.min.js&quot;</span><span class="s2">&gt;&lt;/script&gt;</span>
+  <span class="s2">&lt;script </span><span class="s3">defer src</span><span class="s4">=&quot;/js/docs.js&quot;</span><span class="s2">&gt;&lt;/script&gt;&lt;script </span><span class="s3">defer src</span><span class="s4">=&quot;/js/search.js&quot;</span><span class="s2">&gt;&lt;/script&gt;&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;preload&quot; </span><span class="s3">as</span><span class="s4">=&quot;font&quot; </span><span class="s3">href</span><span class="s4">=&quot;https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2&quot; </span><span class="s3">type</span><span class="s4">=&quot;font/woff2&quot; </span><span class="s3">crossorigin</span><span class="s4">=&quot;anonymous&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;preload&quot; </span><span class="s3">as</span><span class="s4">=&quot;font&quot; </span><span class="s3">href</span><span class="s4">=&quot;/fonts/geomanist/hinted-Geomanist-Book.woff2&quot;    </span><span class="s3">type</span><span class="s4">=&quot;font/woff2&quot; </span><span class="s3">crossorigin</span><span class="s4">=&quot;anonymous&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;preload&quot; </span><span class="s3">as</span><span class="s4">=&quot;font&quot; </span><span class="s3">href</span><span class="s4">=&quot;/fonts/geomanist/hinted-Geomanist-Regular.woff2&quot; </span><span class="s3">type</span><span class="s4">=&quot;font/woff2&quot; </span><span class="s3">crossorigin</span><span class="s4">=&quot;anonymous&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;preload&quot; </span><span class="s3">as</span><span class="s4">=&quot;font&quot; </span><span class="s3">href</span><span class="s4">=&quot;/fonts/glyphicons-halflings-regular.woff2&quot;       </span><span class="s3">type</span><span class="s4">=&quot;font/woff2&quot; </span><span class="s3">crossorigin</span><span class="s4">=&quot;anonymous&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;preload&quot; </span><span class="s3">as</span><span class="s4">=&quot;font&quot; </span><span class="s3">href</span><span class="s4">=&quot;/fonts/fontawesome-webfont.woff2?v=4.7.0&quot;        </span><span class="s3">type</span><span class="s4">=&quot;font/woff2&quot; </span><span class="s3">crossorigin</span><span class="s4">=&quot;anonymous&quot;</span><span class="s2">&gt;</span>
+
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;stylesheet&quot; </span><span class="s3">href</span><span class="s4">=&quot;/css/font-awesome.min.css&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;stylesheet&quot; </span><span class="s3">href</span><span class="s4">=&quot;/css/bootstrap.min.css&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;link </span><span class="s3">rel</span><span class="s4">=&quot;stylesheet&quot; </span><span class="s3">href</span><span class="s4">=&quot;/css/style.css&quot; </span><span class="s3">id</span><span class="s4">=&quot;pagestyle&quot;</span><span class="s2">&gt;</span>
+
+  <span class="s0">&lt;!-- SEO stuff --&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:title&quot; </span><span class="s3">itemprop</span><span class="s4">=&quot;title name&quot; </span><span class="s3">content</span><span class="s4">=&quot;Install Docker Desktop on Windows&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:description&quot; </span><span class="s3">property</span><span class="s4">=&quot;og:description&quot; </span><span class="s3">itemprop</span><span class="s4">=&quot;description&quot; </span><span class="s3">content</span><span class="s4">=&quot;&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:card&quot; </span><span class="s3">content</span><span class="s4">=&quot;summary_large_image&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:domain&quot; </span><span class="s3">content</span><span class="s4">=&quot;docs.docker.com&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:site&quot; </span><span class="s3">content</span><span class="s4">=&quot;@docker_docs&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:url&quot; </span><span class="s3">content</span><span class="s4">=&quot;https://twitter.com/docker_docs&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:image:src&quot; </span><span class="s3">content</span><span class="s4">=&quot;https://docs.docker.com/images/docs@2x.png&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">name</span><span class="s4">=&quot;twitter:image:alt&quot; </span><span class="s3">content</span><span class="s4">=&quot;Docker Documentation&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:title&quot; </span><span class="s3">content</span><span class="s4">=&quot;Install Docker Desktop on Windows&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:description&quot; </span><span class="s3">content</span><span class="s4">=&quot;How to install Docker Desktop for Windows&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:type&quot; </span><span class="s3">content</span><span class="s4">=&quot;website&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:updated_time&quot; </span><span class="s3">itemprop</span><span class="s4">=&quot;dateUpdated&quot; </span><span class="s3">content</span><span class="s4">=&quot;2021-03-22T18:53:17+00:00&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:image&quot; </span><span class="s3">itemprop</span><span class="s4">=&quot;image primaryImageOfPage&quot; </span><span class="s3">content</span><span class="s4">=&quot;https://docs.docker.com/images/docs@2x.png&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:locale&quot; </span><span class="s3">content</span><span class="s4">=&quot;en_US&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:url&quot; </span><span class="s3">content</span><span class="s4">=&quot;https://docs.docker.com/docker-for-windows/install/&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;og:site_name&quot; </span><span class="s3">content</span><span class="s4">=&quot;Docker Documentation&quot; </span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;meta </span><span class="s3">property</span><span class="s4">=&quot;article:published_time&quot; </span><span class="s3">itemprop</span><span class="s4">=&quot;datePublished&quot; </span><span class="s3">content</span><span class="s4">=&quot;2021-03-22T18:53:17+00:00&quot;</span><span class="s2">/&gt;</span>
+  <span class="s2">&lt;script </span><span class="s3">type</span><span class="s4">=&quot;application/ld+json&quot;</span><span class="s2">&gt;</span><span class="s5">{&quot;@context&quot;:&quot;http://schema.org&quot;,&quot;@type&quot;:&quot;WebPage&quot;,&quot;headline&quot;:&quot;Install Docker Desktop on Windows&quot;,&quot;description&quot;:&quot;How to install Docker Desktop for Windows&quot;,&quot;url&quot;:&quot;https://docs.docker.com/docker-for-windows/install/&quot;}</span><span class="s2">&lt;/script&gt;</span>
+  <span class="s0">&lt;!-- END SEO STUFF --&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body </span><span class="s3">class</span><span class="s4">=&quot;colums&quot;</span><span class="s2">&gt;</span>
+    <span class="s2">&lt;header&gt;</span>
+        <span class="s2">&lt;nav </span><span class="s3">class</span><span class="s4">=&quot;nav-secondary navbar navbar-fixed-top&quot;</span><span class="s2">&gt;</span>
+    <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;container-fluid&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;navbar-header&quot;</span><span class="s2">&gt;</span>
+            <span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/&quot;</span><span class="s2">&gt;</span>
+                <span class="s2">&lt;img </span><span class="s3">class</span><span class="s4">=&quot;logo&quot; </span><span class="s3">src</span><span class="s4">=&quot;/images/docker-docs-logo.svg&quot; </span><span class="s3">alt</span><span class="s4">=&quot;Docker Docs&quot; </span><span class="s3">title</span><span class="s4">=&quot;Docker Docs&quot; </span><span class="s3">width</span><span class="s4">=&quot;160&quot; </span><span class="s3">height</span><span class="s4">=&quot;28&quot; </span><span class="s2">/&gt;</span>
+            <span class="s2">&lt;/a&gt;</span>
+        <span class="s2">&lt;/div&gt;</span>
+        <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;navbar-collapse&quot; </span><span class="s3">aria-expanded</span><span class="s4">=&quot;false&quot; </span><span class="s3">style</span><span class="s4">=&quot;</span><span class="s3">height</span><span class="s5">: </span><span class="s8">1</span><span class="s4">px</span><span class="s6">;</span><span class="s4">&quot;</span><span class="s2">&gt;</span>
+            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;logo-mobile&quot;</span><span class="s2">&gt;</span>
+    <span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;img </span><span class="s3">src</span><span class="s4">=&quot;/images/docker-icon.svg&quot; </span><span class="s3">alt</span><span class="s4">=&quot;Docker Docs&quot; </span><span class="s3">title</span><span class="s4">=&quot;Docker Docs&quot; </span><span class="s3">width</span><span class="s4">=&quot;30&quot; </span><span class="s3">height</span><span class="s4">=&quot;30&quot; </span><span class="s2">/&gt;</span>
+    <span class="s2">&lt;/a&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;search-form&quot; </span><span class="s3">id</span><span class="s4">=&quot;search-div&quot;</span><span class="s2">&gt;</span>
+    <span class="s2">&lt;form </span><span class="s3">class</span><span class="s4">=&quot;search-form form-inline&quot; </span><span class="s3">id</span><span class="s4">=&quot;searchForm&quot; </span><span class="s3">action</span><span class="s4">=&quot;/search/&quot; </span><span class="s3">method</span><span class="s4">=&quot;get&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;label </span><span class="s3">for</span><span class="s4">=&quot;st-search-input&quot; </span><span class="s3">class</span><span class="s4">=&quot;sr-only&quot;</span><span class="s2">&gt;</span><span class="s5">Search</span><span class="s2">&lt;/label&gt;</span>
+        <span class="s2">&lt;input </span><span class="s3">class</span><span class="s4">=&quot;search-field form-control ds-input&quot; </span><span class="s3">id</span><span class="s4">=&quot;st-search-input&quot; </span><span class="s3">name</span><span class="s4">=&quot;q&quot; </span><span class="s3">placeholder</span><span class="s4">=&quot;Search the docs&quot; </span><span class="s3">type</span><span class="s4">=&quot;search&quot; </span><span class="s3">autocomplete</span><span class="s4">=&quot;off&quot; </span><span class="s3">spellcheck</span><span class="s4">=&quot;false&quot; </span><span class="s3">dir</span><span class="s4">=&quot;auto&quot; </span><span class="s3">style</span><span class="s4">=&quot;</span><span class="s3">position</span><span class="s5">: </span><span class="s4">relative</span><span class="s6">; </span><span class="s3">vertical-align</span><span class="s5">: </span><span class="s4">top</span><span class="s6">;</span><span class="s4">&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;div </span><span class="s3">id</span><span class="s4">=&quot;autocompleteResults&quot;</span><span class="s2">&gt;&lt;/div&gt;</span>
+        <span class="s0">&lt;!-- &lt;button type=&quot;submit&quot; class=&quot;search-submit btn btn-default&quot;&gt;Search&lt;/button&gt; --&gt;</span>
+    <span class="s2">&lt;/form&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;sidebar-toggle&quot;</span><span class="s2">&gt;</span>
+    <span class="s2">&lt;button </span><span class="s3">type</span><span class="s4">=&quot;button&quot; </span><span class="s3">class</span><span class="s4">=&quot;navbar-toggle collapsed&quot; </span><span class="s3">data-toggle</span><span class="s4">=&quot;collapse&quot; </span><span class="s3">data-target</span><span class="s4">=&quot;#navbar&quot; </span><span class="s3">aria-expanded</span><span class="s4">=&quot;false&quot; </span><span class="s3">aria-controls</span><span class="s4">=&quot;navbar&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;span </span><span class="s3">class</span><span class="s4">=&quot;sr-only&quot;</span><span class="s2">&gt;</span><span class="s5">Toggle navigation</span><span class="s2">&lt;/span&gt;</span>
+        <span class="s2">&lt;span </span><span class="s3">class</span><span class="s4">=&quot;icon-bar&quot;</span><span class="s2">&gt;&lt;/span&gt;</span>
+        <span class="s2">&lt;span </span><span class="s3">class</span><span class="s4">=&quot;icon-bar&quot;</span><span class="s2">&gt;&lt;/span&gt;</span>
+        <span class="s2">&lt;span </span><span class="s3">class</span><span class="s4">=&quot;icon-bar&quot;</span><span class="s2">&gt;&lt;/span&gt;</span>
+    <span class="s2">&lt;/button&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;nav-container hidden-sm hidden-xs&quot;</span><span class="s2">&gt;</span>
+    <span class="s2">&lt;div </span><span class="s3">id</span><span class="s4">=&quot;tabs&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;tabs jsTOCHorizontal&quot;</span><span class="s2">&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/&quot; </span><span class="s3">id</span><span class="s4">=&quot;home&quot;</span><span class="s2">&gt;</span><span class="s5">Home</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/get-started/overview/&quot; </span><span class="s3">id</span><span class="s4">=&quot;guides&quot;</span><span class="s2">&gt;</span><span class="s5">Guides</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/engine/&quot; </span><span class="s3">id</span><span class="s4">=&quot;manuals&quot;</span><span class="s2">&gt;</span><span class="s5">Product manuals</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/reference/&quot; </span><span class="s3">id</span><span class="s4">=&quot;reference&quot;</span><span class="s2">&gt;</span><span class="s5">Reference</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/samples/&quot; </span><span class="s3">id</span><span class="s4">=&quot;samples&quot;</span><span class="s2">&gt;</span><span class="s5">Samples</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</span>
+    <span class="s2">&lt;/div&gt;</span>
+    <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;ctrl-right&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;javascript:void(0)&quot; </span><span class="s3">id</span><span class="s4">=&quot;menu-toggle&quot; </span><span class="s3">aria-label</span><span class="s4">=&quot;Current page's menu toggle&quot;</span><span class="s2">&gt;&lt;i </span><span class="s3">class</span><span class="s4">=&quot;fa fa-indent&quot; </span><span class="s3">aria-hidden</span><span class="s4">=&quot;true&quot;</span><span class="s2">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+
+        <span class="s2">&lt;/div&gt;</span>
+    <span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;/nav&gt;</span>
+
+    <span class="s2">&lt;/header&gt;</span>
+    <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;wrapper right-open&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;container-fluid&quot;</span><span class="s2">&gt;</span>
+            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;row&quot;</span><span class="s2">&gt;</span>
+                <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;col-body&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;main </span><span class="s3">class</span><span class="s4">=&quot;col-content content&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;section </span><span class="s3">class</span><span class="s4">=&quot;section&quot;</span><span class="s2">&gt;&lt;h1&gt;</span><span class="s5">Install Docker Desktop on Windows</span><span class="s2">&lt;/h1&gt;&lt;p&gt;&lt;em </span><span class="s3">class</span><span class="s4">=&quot;reading-time&quot;</span><span class="s2">&gt;</span><span class="s5">Estimated reading time: 6 minutes</span><span class="s2">&lt;/em&gt;&lt;/p&gt;&lt;p&gt;</span><span class="s5">Docker Desktop for Windows is the </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/community-edition&quot;</span><span class="s2">&gt;</span><span class="s5">Community</span><span class="s2">&lt;/a&gt; </span><span class="s5">version of Docker for Microsoft Windows.</span>
+<span class="s5">You can download Docker Desktop for Windows from Docker Hub.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://hub.docker.com/editions/community/docker-ce-desktop-windows/&quot; </span><span class="s3">class</span><span class="s4">=&quot;button outline-btn&quot;</span><span class="s2">&gt;</span><span class="s5">Download from Docker</span>
+<span class="s5">Hub</span><span class="s2">&lt;/a&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">By downloading Docker Desktop, you agree to the terms of the </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/legal/docker-software-end-user-license-agreement&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Software End User License Agreement</span><span class="s2">&lt;/a&gt; </span><span class="s5">and the </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/legal/data-processing-agreement&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Data Processing Agreement</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;h2 </span><span class="s3">id</span><span class="s4">=&quot;system-requirements&quot;</span><span class="s2">&gt;</span><span class="s5">System requirements</span><span class="s2">&lt;/h2&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Your Windows machine must meet the following requirements to successfully install Docker Desktop.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;h3 </span><span class="s3">id</span><span class="s4">=&quot;hyper-v-backend-and-windows-containers&quot;</span><span class="s2">&gt;</span><span class="s5">Hyper-V backend and Windows containers</span><span class="s2">&lt;/h3&gt;</span>
+
+<span class="s2">&lt;ul&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">Windows 10 64-bit: Pro, Enterprise, or Education (Build 17134 or higher).</span><span class="s2">&lt;/p&gt;</span>
+
+    <span class="s2">&lt;p&gt;</span><span class="s5">For Windows 10 Home, see </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#system-requirements-for-wsl-2-backend&quot;</span><span class="s2">&gt;</span><span class="s5">System requirements for WSL 2 backend</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Hyper-V and Containers Windows features must be enabled.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">The following hardware prerequisites are required to successfully run Client</span>
+<span class="s5">Hyper-V on Windows 10:</span><span class="s2">&lt;/p&gt;</span>
+
+    <span class="s2">&lt;ul&gt;</span>
+      <span class="s2">&lt;li&gt;</span><span class="s5">64 bit processor with </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://en.wikipedia.org/wiki/Second_Level_Address_Translation&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Second Level Address Translation (SLAT)</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;</span><span class="s5">4GB system RAM</span><span class="s2">&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;</span><span class="s5">BIOS-level hardware virtualization support must be enabled in the</span>
+<span class="s5">BIOS settings.  For more information, see</span>
+<span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/troubleshoot/#virtualization-must-be-enabled&quot;</span><span class="s2">&gt;</span><span class="s5">Virtualization</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/li&gt;</span>
+    <span class="s2">&lt;/ul&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+
+<span class="s2">&lt;h3 </span><span class="s3">id</span><span class="s4">=&quot;wsl-2-backend&quot;</span><span class="s2">&gt;</span><span class="s5">WSL 2 backend</span><span class="s2">&lt;/h3&gt;</span>
+
+<span class="s2">&lt;ul&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Windows 10 64-bit: Home, Pro, Enterprise, or Education, version 1903 (Build 18362 or higher).</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Enable the WSL 2 feature on Windows. For detailed instructions, refer to the</span>
+  <span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Microsoft documentation</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">The following hardware prerequisites are required to successfully run</span>
+<span class="s5">WSL 2 on Windows 10:</span><span class="s2">&lt;/p&gt;</span>
+
+    <span class="s2">&lt;ul&gt;</span>
+      <span class="s2">&lt;li&gt;</span><span class="s5">64-bit processor with </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://en.wikipedia.org/wiki/Second_Level_Address_Translation&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Second Level Address Translation (SLAT)</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;</span><span class="s5">4GB system RAM</span><span class="s2">&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;</span><span class="s5">BIOS-level hardware virtualization support must be enabled in the</span>
+<span class="s5">BIOS settings.  For more information, see</span>
+<span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/troubleshoot/#virtualization-must-be-enabled&quot;</span><span class="s2">&gt;</span><span class="s5">Virtualization</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/li&gt;</span>
+    <span class="s2">&lt;/ul&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Download and install the </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://docs.microsoft.com/windows/wsl/wsl2-kernel&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Linux kernel update package</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+
+<span class="s2">&lt;blockquote&gt;</span>
+  <span class="s2">&lt;p&gt;&lt;strong&gt;</span><span class="s5">Note</span><span class="s2">&lt;/strong&gt;&lt;/p&gt;</span>
+
+  <span class="s2">&lt;p&gt;</span><span class="s5">Docker supports Docker Desktop on Windows for those versions of Windows 10 that are still within </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot; </span><span class="s3">class</span><span class="s4">=&quot;_&quot;</span><span class="s2">&gt;</span><span class="s5">Microsoft’s servicing timeline</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+<span class="s2">&lt;/blockquote&gt;</span>
+
+<span class="s2">&lt;h3 </span><span class="s3">id</span><span class="s4">=&quot;whats-included-in-the-installer&quot;</span><span class="s2">&gt;</span><span class="s5">What’s included in the installer</span><span class="s2">&lt;/h3&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">The Docker Desktop installation includes </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/engine/&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Engine</span><span class="s2">&lt;/a&gt;</span><span class="s5">,</span>
+<span class="s5">Docker CLI client, </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/compose/&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Compose</span><span class="s2">&lt;/a&gt;</span><span class="s5">,</span>
+<span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/notary/getting_started/&quot;</span><span class="s2">&gt;</span><span class="s5">Notary</span><span class="s2">&lt;/a&gt;</span><span class="s5">,</span>
+<span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://github.com/kubernetes/kubernetes/&quot;</span><span class="s2">&gt;</span><span class="s5">Kubernetes</span><span class="s2">&lt;/a&gt;</span><span class="s5">,</span>
+<span class="s5">and </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://github.com/docker/docker-credential-helpers/&quot;</span><span class="s2">&gt;</span><span class="s5">Credential Helper</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Containers and images created with Docker Desktop are shared between all</span>
+<span class="s5">user accounts on machines where it is installed. This is because all Windows</span>
+<span class="s5">accounts use the same VM to build and run containers. Note that it is not possible to share containers and images between user accounts when using the Docker Desktop WSL 2 backend.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Nested virtualization scenarios, such as running Docker Desktop on a</span>
+<span class="s5">VMWare or Parallels instance might work, but there are no guarantees. For</span>
+<span class="s5">more information, see </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/troubleshoot/#running-docker-desktop-for-windows-in-nested-virtualization-scenarios&quot;</span><span class="s2">&gt;</span><span class="s5">Running Docker Desktop in nested virtualization scenarios</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;h3 </span><span class="s3">id</span><span class="s4">=&quot;about-windows-containers&quot;</span><span class="s2">&gt;</span><span class="s5">About Windows containers</span><span class="s2">&lt;/h3&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Looking for information on using Windows containers?</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;ul&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/#switch-between-windows-and-linux-containers&quot;</span><span class="s2">&gt;</span><span class="s5">Switch between Windows and Linux containers</span><span class="s2">&lt;/a&gt;</span>
+<span class="s5">describes how you can toggle between Linux and Windows containers in Docker Desktop and points you to the tutorial mentioned above.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://github.com/docker/labs/blob/master/windows/windows-containers/README.md&quot;</span><span class="s2">&gt;</span><span class="s5">Getting Started with Windows Containers (Lab)</span><span class="s2">&lt;/a&gt;</span>
+<span class="s5">provides a tutorial on how to set up and run Windows containers on Windows 10, Windows Server 2016 and Windows Server 2019. It shows you how to use a MusicStore application</span>
+<span class="s5">with Windows containers.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Docker Container Platform for Windows </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/microsoft/&quot;</span><span class="s2">&gt;</span><span class="s5">articles and blog</span>
+<span class="s5">posts</span><span class="s2">&lt;/a&gt; </span><span class="s5">on the Docker website.</span><span class="s2">&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+
+<span class="s2">&lt;h2 </span><span class="s3">id</span><span class="s4">=&quot;install-docker-desktop-on-windows&quot;</span><span class="s2">&gt;</span><span class="s5">Install Docker Desktop on Windows</span><span class="s2">&lt;/h2&gt;</span>
+
+<span class="s2">&lt;ol&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">Double-click </span><span class="s2">&lt;strong&gt;</span><span class="s5">Docker Desktop Installer.exe</span><span class="s2">&lt;/strong&gt; </span><span class="s5">to run the installer.</span><span class="s2">&lt;/p&gt;</span>
+
+    <span class="s2">&lt;p&gt;</span><span class="s5">If you haven’t already downloaded the installer (</span><span class="s2">&lt;code </span><span class="s3">class</span><span class="s4">=&quot;highlighter-rouge&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Desktop Installer.exe</span><span class="s2">&lt;/code&gt;</span><span class="s5">), you can get it from</span>
+ <span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://hub.docker.com/editions/community/docker-ce-desktop-windows/&quot;</span><span class="s2">&gt;&lt;strong&gt;</span><span class="s5">Docker Hub</span><span class="s2">&lt;/strong&gt;&lt;/a&gt;</span><span class="s5">.</span>
+ <span class="s5">It typically downloads to your </span><span class="s2">&lt;code </span><span class="s3">class</span><span class="s4">=&quot;highlighter-rouge&quot;</span><span class="s2">&gt;</span><span class="s5">Downloads</span><span class="s2">&lt;/code&gt; </span><span class="s5">folder, or you can run it from</span>
+ <span class="s5">the recent downloads bar at the bottom of your web browser.</span><span class="s2">&lt;/p&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">When prompted, ensure the </span><span class="s2">&lt;strong&gt;</span><span class="s5">Enable Hyper-V Windows Features</span><span class="s2">&lt;/strong&gt; </span><span class="s5">or the </span><span class="s2">&lt;strong&gt;</span><span class="s5">Install required Windows components for WSL 2</span><span class="s2">&lt;/strong&gt; </span><span class="s5">option is selected on the Configuration page.</span><span class="s2">&lt;/p&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">Follow the instructions on the installation wizard to authorize the installer and proceed with the install.</span><span class="s2">&lt;/p&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">When the installation is successful, click </span><span class="s2">&lt;strong&gt;</span><span class="s5">Close</span><span class="s2">&lt;/strong&gt; </span><span class="s5">to complete the installation process.</span><span class="s2">&lt;/p&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span>
+    <span class="s2">&lt;p&gt;</span><span class="s5">If your admin account is different to your user account, you must add the user to the </span><span class="s2">&lt;strong&gt;</span><span class="s5">docker-users</span><span class="s2">&lt;/strong&gt; </span><span class="s5">group. Run </span><span class="s2">&lt;strong&gt;</span><span class="s5">Computer Management</span><span class="s2">&lt;/strong&gt; </span><span class="s5">as an administrator and navigate to </span><span class="s2">&lt;strong&gt;</span><span class="s5">Local Users and Groups</span><span class="s2">&lt;/strong&gt; </span><span class="s9">&amp;gt; </span><span class="s2">&lt;strong&gt;</span><span class="s5">Groups</span><span class="s2">&lt;/strong&gt; </span><span class="s9">&amp;gt; </span><span class="s2">&lt;strong&gt;</span><span class="s5">docker-users</span><span class="s2">&lt;/strong&gt;</span><span class="s5">. Right-click to add the user to the group.</span>
+<span class="s5">Log out and log back in for the changes to take effect.</span><span class="s2">&lt;/p&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+<span class="s2">&lt;/ol&gt;</span>
+
+<span class="s2">&lt;h2 </span><span class="s3">id</span><span class="s4">=&quot;start-docker-desktop&quot;</span><span class="s2">&gt;</span><span class="s5">Start Docker Desktop</span><span class="s2">&lt;/h2&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Docker Desktop does not start automatically after installation. To start Docker Desktop, search for Docker, and select </span><span class="s2">&lt;strong&gt;</span><span class="s5">Docker Desktop</span><span class="s2">&lt;/strong&gt; </span><span class="s5">in the search results.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;&lt;img </span><span class="s3">src</span><span class="s4">=&quot;/docker-for-windows/images/docker-app-search.png&quot; </span><span class="s3">alt</span><span class="s4">=&quot;search for Docker app&quot; </span><span class="s3">width</span><span class="s4">=&quot;300px&quot; </span><span class="s2">/&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">When the whale icon in the status bar stays steady, Docker Desktop is up-and-running, and is accessible from any terminal window.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;&lt;img </span><span class="s3">src</span><span class="s4">=&quot;/docker-for-windows/images/whale-icon-systray.png&quot; </span><span class="s3">alt</span><span class="s4">=&quot;whale on taskbar&quot; </span><span class="s2">/&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">If the whale icon is hidden in the Notifications area, click the up arrow on the</span>
+<span class="s5">taskbar to show it. To learn more, see </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/#docker-settings-dialog&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Settings</span><span class="s2">&lt;/a&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">When the initialization is complete, Docker Desktop launches the onboarding tutorial. The tutorial includes a simple exercise to build an example Docker image, run it as a container, push and save the image to Docker Hub.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;&lt;img </span><span class="s3">src</span><span class="s4">=&quot;/docker-for-windows/images/docker-tutorial-win.png&quot; </span><span class="s3">alt</span><span class="s4">=&quot;Docker Quick Start tutorial&quot; </span><span class="s3">width</span><span class="s4">=&quot;450px&quot; </span><span class="s2">/&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Congratulations! You are now successfully running Docker Desktop on Windows.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">If you would like to rerun the tutorial, go to the Docker Desktop menu and select </span><span class="s2">&lt;strong&gt;</span><span class="s5">Learn</span><span class="s2">&lt;/strong&gt;</span><span class="s5">.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;h2 </span><span class="s3">id</span><span class="s4">=&quot;automatic-updates&quot;</span><span class="s2">&gt;</span><span class="s5">Automatic updates</span><span class="s2">&lt;/h2&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">Starting with Docker Desktop 3.0.0, updates to Docker Desktop will be available automatically as delta updates from the previous version.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">When an update is available, Docker Desktop automatically downloads it to your machine and displays an icon to indicate the availability of a newer version. All you need to do now is to click </span><span class="s2">&lt;strong&gt;</span><span class="s5">Update and restart</span><span class="s2">&lt;/strong&gt; </span><span class="s5">from the Docker menu. This installs the latest update and restarts Docker Desktop for the changes to take effect.</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;h2 </span><span class="s3">id</span><span class="s4">=&quot;uninstall-docker-desktop&quot;</span><span class="s2">&gt;</span><span class="s5">Uninstall Docker Desktop</span><span class="s2">&lt;/h2&gt;</span>
+
+<span class="s2">&lt;p&gt;</span><span class="s5">To uninstall Docker Desktop from your Windows machine:</span><span class="s2">&lt;/p&gt;</span>
+
+<span class="s2">&lt;ol&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">From the Windows </span><span class="s2">&lt;strong&gt;</span><span class="s5">Start</span><span class="s2">&lt;/strong&gt; </span><span class="s5">menu, select </span><span class="s2">&lt;strong&gt;</span><span class="s5">Settings</span><span class="s2">&lt;/strong&gt; </span><span class="s9">&amp;gt; </span><span class="s2">&lt;strong&gt;</span><span class="s5">Apps</span><span class="s2">&lt;/strong&gt; </span><span class="s9">&amp;gt; </span><span class="s2">&lt;strong&gt;</span><span class="s5">Apps </span><span class="s9">&amp;amp; </span><span class="s5">features</span><span class="s2">&lt;/strong&gt;</span><span class="s5">.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Select </span><span class="s2">&lt;strong&gt;</span><span class="s5">Docker Desktop</span><span class="s2">&lt;/strong&gt; </span><span class="s5">from the </span><span class="s2">&lt;strong&gt;</span><span class="s5">Apps </span><span class="s9">&amp;amp; </span><span class="s5">features</span><span class="s2">&lt;/strong&gt; </span><span class="s5">list and then select </span><span class="s2">&lt;strong&gt;</span><span class="s5">Uninstall</span><span class="s2">&lt;/strong&gt;</span><span class="s5">.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;</span><span class="s5">Click </span><span class="s2">&lt;strong&gt;</span><span class="s5">Uninstall</span><span class="s2">&lt;/strong&gt; </span><span class="s5">to confirm your selection.</span><span class="s2">&lt;/li&gt;</span>
+<span class="s2">&lt;/ol&gt;</span>
+
+<span class="s2">&lt;blockquote&gt;</span>
+  <span class="s2">&lt;p&gt;&lt;strong&gt;</span><span class="s5">Important</span><span class="s2">&lt;/strong&gt;&lt;/p&gt;</span>
+
+  <span class="s2">&lt;p&gt;</span><span class="s5">Uninstalling Docker Desktop destroys Docker containers, images, volumes, and</span>
+<span class="s5">other Docker related data local to the machine, and removes the files generated</span>
+<span class="s5">by the application. Refer to the </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/desktop/backup-and-restore/&quot;</span><span class="s2">&gt;</span><span class="s5">back up and restore data</span><span class="s2">&lt;/a&gt;</span>
+<span class="s5">section to learn how to preserve important data before uninstalling.</span><span class="s2">&lt;/p&gt;</span>
+<span class="s2">&lt;/blockquote&gt;</span>
+
+<span class="s2">&lt;h2 </span><span class="s3">id</span><span class="s4">=&quot;where-to-go-next&quot;</span><span class="s2">&gt;</span><span class="s5">Where to go next</span><span class="s2">&lt;/h2&gt;</span>
+
+<span class="s2">&lt;ul&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/&quot;</span><span class="s2">&gt;</span><span class="s5">Getting started</span><span class="s2">&lt;/a&gt; </span><span class="s5">introduces Docker Desktop for Windows.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/get-started/&quot;</span><span class="s2">&gt;</span><span class="s5">Get started with Docker</span><span class="s2">&lt;/a&gt; </span><span class="s5">is a tutorial that teaches you how to</span>
+<span class="s5">deploy a multi-service stack.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/troubleshoot/&quot;</span><span class="s2">&gt;</span><span class="s5">Troubleshooting</span><span class="s2">&lt;/a&gt; </span><span class="s5">describes common problems, workarounds, and</span>
+<span class="s5">how to get support.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/desktop/faqs/&quot;</span><span class="s2">&gt;</span><span class="s5">FAQs</span><span class="s2">&lt;/a&gt; </span><span class="s5">provide answers to frequently asked questions.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/docker-for-windows/release-notes/&quot;</span><span class="s2">&gt;</span><span class="s5">Release notes</span><span class="s2">&lt;/a&gt; </span><span class="s5">lists component updates, new features, and improvements associated with Docker Desktop releases.</span><span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/desktop/backup-and-restore/&quot;</span><span class="s2">&gt;</span><span class="s5">Back up and restore data</span><span class="s2">&lt;/a&gt; </span><span class="s5">provides instructions on backing up and restoring data related to Docker.</span><span class="s2">&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+<span class="s2">&lt;span </span><span class="s3">class</span><span class="s4">=&quot;glyphicon glyphicon-tags&quot; </span><span class="s3">style</span><span class="s4">=&quot;</span><span class="s3">padding-right</span><span class="s5">: </span><span class="s8">10</span><span class="s4">px&quot;</span><span class="s2">&gt;&lt;/span&gt;&lt;span </span><span class="s3">style</span><span class="s4">=&quot;</span><span class="s3">vertical-align</span><span class="s5">: </span><span class="s8">2</span><span class="s4">px&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/search/?q=windows&quot;</span><span class="s2">&gt;</span><span class="s5">windows</span><span class="s2">&lt;/a&gt;</span><span class="s5">, </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/search/?q=install&quot;</span><span class="s2">&gt;</span><span class="s5">install</span><span class="s2">&lt;/a&gt;</span><span class="s5">, </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/search/?q=download&quot;</span><span class="s2">&gt;</span><span class="s5">download</span><span class="s2">&lt;/a&gt;</span><span class="s5">, </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/search/?q=run&quot;</span><span class="s2">&gt;</span><span class="s5">run</span><span class="s2">&lt;/a&gt;</span><span class="s5">, </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/search/?q=docker&quot;</span><span class="s2">&gt;</span><span class="s5">docker</span><span class="s2">&lt;/a&gt;</span><span class="s5">, </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s4">=&quot;/search/?q=local&quot;</span><span class="s2">&gt;</span><span class="s5">local</span><span class="s2">&lt;/a&gt;&lt;/span&gt;&lt;div </span><span class="s3">class</span><span class="s4">=&quot;ratings-div&quot;</span><span class="s2">&gt;&lt;div </span><span class="s3">id</span><span class="s4">=&quot;pd_rating_holder_8453675&quot;</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</span>
+                    <span class="s2">&lt;/main&gt;</span>
+                    <span class="s2">&lt;nav </span><span class="s3">class</span><span class="s4">=&quot;col-nav&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;div </span><span class="s3">id</span><span class="s4">=&quot;sidebar-nav&quot; </span><span class="s3">class</span><span class="s4">=&quot;sidebar hidden-sm hidden-xs&quot;</span><span class="s2">&gt;</span>
+                            <span class="s2">&lt;div </span><span class="s3">id</span><span class="s4">=&quot;navbar&quot; </span><span class="s3">class</span><span class="s4">=&quot;nav-sidebar&quot;</span><span class="s2">&gt;</span>
+                                <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;nav jsTOCHorizontal hidden-md hidden-lg&quot;</span><span class="s2">&gt;&lt;/ul&gt;</span>
+                                <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;nav&quot; </span><span class="s3">id</span><span class="s4">=&quot;jsTOCLeftNav&quot;</span><span class="s2">&gt;&lt;/ul&gt;</span>
+                            <span class="s2">&lt;/div&gt;</span>
+                        <span class="s2">&lt;/div&gt;</span>
+                    <span class="s2">&lt;/nav&gt;</span>
+                    <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;col-toc&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;sidebar hidden-xs hidden-sm&quot;</span><span class="s2">&gt;</span>
+                            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;toc-nav&quot;</span><span class="s2">&gt;</span>
+                                <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;feedback-links&quot;</span><span class="s2">&gt;</span>
+                                    <span class="s2">&lt;ul&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://github.com/docker/docker.github.io/edit/master/docker-for-windows/install.md&quot;</span><span class="s2">&gt;&lt;i </span><span class="s3">class</span><span class="s4">=&quot;fa fa-pencil-square-o&quot; </span><span class="s3">aria-hidden</span><span class="s4">=&quot;true&quot;</span><span class="s2">&gt;&lt;/i&gt; </span><span class="s5">Edit this page</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://github.com/docker/docker.github.io/issues/new?body=File: [docker-for-windows/install.md](https://docs.docker.com/docker-for-windows/install/)&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;&lt;i </span><span class="s3">class</span><span class="s4">=&quot;fa fa-check&quot; </span><span class="s3">aria-hidden</span><span class="s4">=&quot;true&quot;</span><span class="s2">&gt;&lt;/i&gt; </span><span class="s5">Request docs changes</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                                        <span class="s2">&lt;li&gt;&lt;div </span><span class="s3">class</span><span class="s4">=&quot;toggle-mode&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;icon&quot;</span><span class="s2">&gt;</span>
+      <span class="s2">&lt;i </span><span class="s3">class</span><span class="s4">=&quot;fa fa-sun-o&quot; </span><span class="s3">aria-hidden</span><span class="s4">=&quot;true&quot;</span><span class="s2">&gt;&lt;/i&gt;</span>
+  <span class="s2">&lt;/div&gt;</span>
+  <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;toggle-switch&quot;</span><span class="s2">&gt;</span>
+      <span class="s2">&lt;label </span><span class="s3">class</span><span class="s4">=&quot;switch&quot;</span><span class="s2">&gt;</span>
+          <span class="s2">&lt;input </span><span class="s3">type</span><span class="s4">=&quot;checkbox&quot; </span><span class="s3">id</span><span class="s4">=&quot;switch-style&quot;</span><span class="s2">&gt;</span>
+          <span class="s2">&lt;span </span><span class="s3">class</span><span class="s4">=&quot;slider round&quot;</span><span class="s2">&gt;&lt;/span&gt;</span>
+      <span class="s2">&lt;/label&gt;</span>
+  <span class="s2">&lt;/div&gt;</span>
+  <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;icon&quot;</span><span class="s2">&gt;</span>
+      <span class="s2">&lt;i </span><span class="s3">class</span><span class="s4">=&quot;fa fa-moon-o&quot; </span><span class="s3">aria-hidden</span><span class="s4">=&quot;true&quot;</span><span class="s2">&gt;&lt;/i&gt;</span>
+  <span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;/li&gt;</span>
+                                    <span class="s2">&lt;/ul&gt;</span>
+                                <span class="s2">&lt;/div&gt;&lt;div </span><span class="s3">id</span><span class="s4">=&quot;side-toc-title&quot;</span><span class="s2">&gt;</span><span class="s5">On this page:</span><span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;ul </span><span class="s3">id</span><span class="s4">=&quot;my_toc&quot; </span><span class="s3">class</span><span class="s4">=&quot;inline_toc&quot;</span><span class="s2">&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#system-requirements&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">System requirements</span><span class="s2">&lt;/a&gt;</span>
+    <span class="s2">&lt;ul&gt;</span>
+      <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#hyper-v-backend-and-windows-containers&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">Hyper-V backend and Windows containers</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#wsl-2-backend&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">WSL 2 backend</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#whats-included-in-the-installer&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">What’s included in the installer</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#about-windows-containers&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">About Windows containers</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="s2">&lt;/ul&gt;</span>
+  <span class="s2">&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#install-docker-desktop-on-windows&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">Install Docker Desktop on Windows</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#start-docker-desktop&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">Start Docker Desktop</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#automatic-updates&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">Automatic updates</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#uninstall-docker-desktop&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">Uninstall Docker Desktop</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;#where-to-go-next&quot; </span><span class="s3">class</span><span class="s4">=&quot;nomunge&quot;</span><span class="s2">&gt;</span><span class="s5">Where to go next</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="s2">&lt;/ul&gt;</span>
+
+<span class="s2">&lt;/div&gt;</span>
+                        <span class="s2">&lt;/div&gt;</span>
+                    <span class="s2">&lt;/div&gt;</span>
+                <span class="s2">&lt;/div&gt;</span>
+            <span class="s2">&lt;/div&gt;</span>
+        <span class="s2">&lt;/div&gt;</span>
+    <span class="s2">&lt;/div&gt;</span>
+    <span class="s2">&lt;footer </span><span class="s3">class</span><span class="s4">=&quot;footer&quot;</span><span class="s2">&gt;</span>
+          
+    <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;container&quot;</span><span class="s2">&gt;</span>
+        <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;top_footer&quot;</span><span class="s2">&gt;</span>
+            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;row&quot;</span><span class="s2">&gt;</span>
+                <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;col-xs-12 col-sm-3 col-md-3&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;footer_links&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;b&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/why-docker&quot;</span><span class="s2">&gt;</span><span class="s5">Why Docker?</span><span class="s2">&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/what-container&quot;</span><span class="s2">&gt;</span><span class="s5">What is a Container?</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;/ul&gt;</span>
+                <span class="s2">&lt;/div&gt;</span>
+                <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;col-xs-12 col-sm-3 col-md-3&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;footer_links&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;b&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/overview&quot;</span><span class="s2">&gt;</span><span class="s5">Products</span><span class="s2">&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/docker-desktop&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Desktop</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/docker-hub&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Hub</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/roadmap&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Product Roadmap</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;b&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/docker-desktop&quot;</span><span class="s2">&gt;</span><span class="s5">Features</span><span class="s2">&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/container-runtime&quot;</span><span class="s2">&gt;</span><span class="s5">Container Runtime</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/developer-tools&quot;</span><span class="s2">&gt;</span><span class="s5">Developer Tools</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/kubernetes&quot;</span><span class="s2">&gt;</span><span class="s5">Kubernetes</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;/ul&gt;</span>
+                <span class="s2">&lt;/div&gt;</span>
+                <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;col-xs-12 col-sm-3 col-md-3&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;footer_links&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;b&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/products/docker-desktop&quot;</span><span class="s2">&gt;</span><span class="s5">Developers</span><span class="s2">&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/use-cases&quot;</span><span class="s2">&gt;</span><span class="s5">Use Cases</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/play-with-docker&quot;</span><span class="s2">&gt;</span><span class="s5">Play with Docker</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/docker-community&quot;</span><span class="s2">&gt;</span><span class="s5">Community</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/open-source&quot;</span><span class="s2">&gt;</span><span class="s5">Open Source</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/community/docker-captains&quot;</span><span class="s2">&gt;</span><span class="s5">Docker Captains</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;/ul&gt;</span>
+                <span class="s2">&lt;/div&gt;</span>
+                <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;col-xs-12 col-sm-3 col-md-3&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;footer_links&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;b&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/company&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot;</span><span class="s2">&gt;</span><span class="s5">Company</span><span class="s2">&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/company&quot;</span><span class="s2">&gt;</span><span class="s5">About Us</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/blog/&quot; </span><span class="s3">target</span><span class="s4">=&quot;_blank&quot; </span><span class="s3">rel</span><span class="s4">=&quot;noopener&quot;</span><span class="s2">&gt;</span><span class="s5">Blog</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/customers&quot;</span><span class="s2">&gt;</span><span class="s5">Customers</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/partners&quot;</span><span class="s2">&gt;</span><span class="s5">Partners</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/company/newsroom&quot;</span><span class="s2">&gt;</span><span class="s5">Newsroom</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/careers&quot;</span><span class="s2">&gt;</span><span class="s5">Careers</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/company/contact&quot;</span><span class="s2">&gt;</span><span class="s5">Contact Us</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;/ul&gt;</span>
+                <span class="s2">&lt;/div&gt;</span>
+            <span class="s2">&lt;/div&gt;</span>
+            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;footer-nav&quot;</span><span class="s2">&gt;</span>
+                <span class="s2">&lt;nav </span><span class="s3">class</span><span class="s4">=&quot;footer_sub_nav&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;menu&quot;</span><span class="s2">&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;http://status.docker.com/&quot;</span><span class="s2">&gt;</span><span class="s5">Status</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/docker-security&quot;</span><span class="s2">&gt;</span><span class="s5">Security</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/legal&quot;</span><span class="s2">&gt;</span><span class="s5">Legal</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="s2">&lt;li&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.docker.com/company/contact&quot;</span><span class="s2">&gt;</span><span class="s5">Contact</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;/ul&gt;</span>
+                <span class="s2">&lt;/nav&gt;</span>
+            <span class="s2">&lt;/div&gt;</span>
+        <span class="s2">&lt;/div&gt;</span>
+        <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;bottom_footer&quot;</span><span class="s2">&gt;</span>
+            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;footer-copyright col-xs-12 col-md-8&quot;</span><span class="s2">&gt;</span>
+                <span class="s2">&lt;p </span><span class="s3">class</span><span class="s4">=&quot;copyright&quot;</span><span class="s2">&gt;</span>
+                    <span class="s5">Copyright </span><span class="s9">&amp;copy; </span><span class="s5">2013-2021 Docker Inc. All rights reserved. </span><span class="s2">&lt;/p&gt;</span>
+            <span class="s2">&lt;/div&gt;</span>
+            <span class="s2">&lt;div </span><span class="s3">class</span><span class="s4">=&quot;footer_social_nav&quot;</span><span class="s2">&gt;</span>
+                <span class="s2">&lt;ul </span><span class="s3">class</span><span class="s4">=&quot;nav-social&quot;</span><span class="s2">&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-twitter&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;http://twitter.com/docker&quot;</span><span class="s2">&gt;</span><span class="s5">Twitter</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-youtube&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;http://www.youtube.com/user/dockerrun&quot;</span><span class="s2">&gt;</span><span class="s5">Youtube</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-github&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://github.com/docker&quot;</span><span class="s2">&gt;</span><span class="s5">GitHub</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-linkedin&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.linkedin.com/company/docker&quot;</span><span class="s2">&gt;</span><span class="s5">Linkedin</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-facebook&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.facebook.com/docker.run&quot;</span><span class="s2">&gt;</span><span class="s5">Facebook</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-slideshare&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.slideshare.net/docker&quot;</span><span class="s2">&gt;</span><span class="s5">Slideshare</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="s2">&lt;li </span><span class="s3">class</span><span class="s4">=&quot;fa fa-reddit&quot;</span><span class="s2">&gt;&lt;a </span><span class="s3">href</span><span class="s4">=&quot;https://www.reddit.com/r/docker&quot;</span><span class="s2">&gt;</span><span class="s5">Reddit</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="s2">&lt;/ul&gt;</span>
+            <span class="s2">&lt;/div&gt;</span>
+        <span class="s2">&lt;/div&gt;</span>
+    <span class="s2">&lt;/div&gt;</span>
+
+    <span class="s2">&lt;/footer&gt;</span>
+    <span class="s2">&lt;script&gt;</span><span class="s6">const </span><span class="s1">pageURL = </span><span class="s7">&quot;/docker-for-windows/install/&quot;</span><span class="s6">;</span><span class="s2">&lt;/script&gt;&lt;script&gt;</span>
+    <span class="s6">let </span><span class="s1">PDRTJS_settings_8453675 = {</span>
+        <span class="s7">&quot;id&quot;</span><span class="s5">: </span><span class="s7">&quot;8453675&quot;</span><span class="s6">,</span>
+        <span class="s7">&quot;unique_id&quot;</span><span class="s5">: </span><span class="s7">&quot;docker-for-windows/install.md&quot;</span><span class="s6">,</span>
+        <span class="s7">&quot;title&quot;</span><span class="s5">: </span><span class="s7">&quot;Install Docker Desktop on Windows&quot;</span><span class="s6">,</span>
+        <span class="s7">&quot;font_family&quot;</span><span class="s5">: </span><span class="s7">&quot;Open Sans, sans serif&quot;</span><span class="s6">,</span>
+        <span class="s7">&quot;font_color&quot;</span><span class="s5">: </span><span class="s7">&quot;b9c2cc&quot;</span><span class="s6">,</span>
+        <span class="s7">&quot;font_align&quot;</span><span class="s5">: </span><span class="s7">&quot;center&quot;</span><span class="s6">,</span>
+        <span class="s7">&quot;permalink&quot;</span><span class="s5">: </span><span class="s7">&quot;https://github.com/docker/docker.github.io/blob/master/docker-for-windows/install.md&quot;</span>
+    <span class="s5">}</span><span class="s6">;</span>
+    <span class="s5">(</span><span class="s6">function </span><span class="s5">(d</span><span class="s6">, </span><span class="s1">c</span><span class="s6">, </span><span class="s1">j) {</span>
+        <span class="s6">if </span><span class="s5">(!document.getElementById(j)) {</span>
+            <span class="s6">let </span><span class="s1">pd=d.createElement(c)</span><span class="s6">,</span><span class="s1">s</span><span class="s6">;</span><span class="s1">pd.id=j</span><span class="s6">;</span><span class="s1">pd.src=</span><span class="s7">'https://polldaddy.com/js/rating/rating.js'</span><span class="s6">;</span><span class="s1">s=document.getElementsByTagName(c)[</span><span class="s8">0</span><span class="s5">]</span><span class="s6">;</span><span class="s1">s.parentNode.insertBefore(pd</span><span class="s6">, </span><span class="s1">s)</span><span class="s6">;</span>
+        <span class="s5">}</span>
+    <span class="s5">}(document</span><span class="s6">, </span><span class="s7">'script'</span><span class="s6">, </span><span class="s7">'pd-rating-js'</span><span class="s5">))</span><span class="s6">;</span>
+<span class="s2">&lt;/script&gt;&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
